@@ -243,30 +243,44 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
             <div>
                 <h4>Links</h4>
-                <a href="home.php">Início</a>
-                <a href="#contato">Sobre</a>
-                <a href="#contato">Funcionalidades</a>
-                <a href="#contato">Como funciona</a>
+                <a href="login.php">Entrar</a>
+                <a href="cadastro.php">Criar conta</a>
             </div>
 
             <div>
                 <h4>Contato</h4>
                 <span><i class="fa-solid fa-phone"></i> (00) 0000-0000</span><br>
                 <span><i class="fa-solid fa-envelope"></i> contato@conectanet.com.br</span><br>
-                <span><i class="fa-solid fa-location-dot"></i> Curitiba - PR</span>
+                <span><i class="fa-solid fa-location-dot"></i> Rio do Sul - SC</span>
             </div>
 
-            <div>
-                <h4>Siga-nos</h4>
-                <a href="login.php">Entrar</a>
-                <a href="cadastro.php">Criar conta</a>
-            </div>
+            <div class="footer-col">
+                <h3>Siga-nos</h3>
+
+            <div class="social-icons">
+                <a href="#" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="#" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+
+        <a href="#" aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+        </a>
+
+        <a href="#" aria-label="X">
+            <i class="fa-brands fa-x-twitter"></i>
+        </a>
+    </div>
+</div>
 
         </div>
 
         <div class="rodape-baixo">
             <span>&copy; 2026 ConectaNet. Todos os direitos reservados.</span>
-            <span>Termos de Uso</span>
+            <span>Termos de Uso | Políticas de privacidades.</span>
         </div>
 
     </div>

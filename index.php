@@ -137,11 +137,6 @@ $atendimentos = $stmt->get_result();
             </tr>
         <?php } ?>
     </table>
-    <footer>
-        <p>
-            © 2026 ConectaNet - Christian
-        </p>
-    </footer>
 </main>
 </body>
 </html>

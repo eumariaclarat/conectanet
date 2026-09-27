@@ -1037,3 +1037,38 @@ footer {
         font-size: 12px;
     }
 }
+/* ÍCONES SOCIAIS DO RODAPÉ */
+
+.social-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    margin-top: 18px;
+}
+
+/* Círculos dos ícones */
+.social-icons a {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #263568;
+    color: #c8d4ff;
+
+    border-radius: 50%;
+    font-size: 17px;
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+/* Efeito ao passar o mouse */
+.social-icons a:hover {
+    background: #3157d5;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
