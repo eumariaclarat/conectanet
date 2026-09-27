@@ -266,15 +266,15 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
                 <i class="fa-brands fa-linkedin-in"></i>
             </a>
 
-        <a href="#" aria-label="YouTube">
-            <i class="fa-brands fa-youtube"></i>
-        </a>
+            <a href="#" aria-label="YouTube">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
 
-        <a href="#" aria-label="X">
-            <i class="fa-brands fa-x-twitter"></i>
-        </a>
+            <a href="#" aria-label="X">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+        </div>
     </div>
-</div>
 
         </div>
 

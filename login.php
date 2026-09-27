@@ -92,7 +92,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 placeholder="Senha"
                 required
             >
-
+<label>Tipo de usuário</label>
+            <select name="tipo" required>
+                <option value="">
+                    Selecione o tipo 
+                </option>
+                <option value="funcionario">
+                    Funcionário
+                </option>
+                <option value="usuario">
+                    Cliente
+                </option>
+            </select>
             <button
                 type="button"
                 class="mostrar"
@@ -108,7 +119,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </button>
 
     </form>
-
     <p class="cadastro">
         Ainda não possui uma conta?
         <a href="cadastro.php">Criar conta</a>
