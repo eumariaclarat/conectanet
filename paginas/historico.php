@@ -83,8 +83,8 @@ $historico = $stmt->get_result();
             <?php } ?>
         </div>
         <!-- Fim -->
-         
         <?php } ?>
+        
     </div>
 
 </main>

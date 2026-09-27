@@ -101,42 +101,37 @@ $visitas = $stmt->get_result();
         </form>
     </div>
     
-    <!-- Iní
+    
     <h2>Minhas visitas</h2>
     <?php if ($visitas->num_rows > 0) { ?>
+    <!-- Início Relatório -->
     <?php while ($v = $visitas->fetch_assoc()) { ?>
     <div class="visita">
         <h2>
             <i class="fa-solid fa-screwdriver-wrench"></i>
             Visita técnica
         </h2>
-
-    <p>
-    <i class="fa-regular fa-calendar"></i>
-    <strong>Data:</strong>
-    <?= date("d/m/Y", strtotime($v["data"])) ?>
-    </p>
-
-    <p>
-    <i class="fa-regular fa-clock"></i>
-    <strong>Horário:</strong>
-    <?= date("H:i", strtotime($v["horario"])) ?>
-    </p>
-
-    <p>
-    <i class="fa-solid fa-user-gear"></i>
-    <strong>Atendido por:</strong>
-    <?= htmlspecialchars($v["tecnico"]) ?>
-    </p>
-
+        <p>
+            <i class="fa-regular fa-calendar"></i>
+            <strong>Data:</strong>
+            <?= date("d/m/Y", strtotime($v["data"])) ?>
+        </p>
+        <p>
+            <i class="fa-regular fa-clock"></i>
+            <strong>Horário:</strong>
+            <?= date("H:i", strtotime($v["horario"])) ?>
+        </p>
+        <p>
+            <i class="fa-solid fa-user-gear"></i>
+            <strong>Atendido por:</strong>
+            <?= htmlspecialchars($v["tecnico"]) ?>
+        </p>
     </div>
-
     <?php } ?>
-
+    <!-- Fim Relatório -->
+    
     <?php } else { ?>
-
     <p>Nenhuma visita agendada.</p>
-
     <?php } ?>
 
 </main>
