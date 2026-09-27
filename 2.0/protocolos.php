@@ -66,55 +66,48 @@ $resultado = $stmt->get_result();
 
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
+    <meta charset="UTF-8">
+    <title>Protocolos | ConectaNet</title>
 
-<meta charset="UTF-8">
-
-<title>Protocolos | ConectaNet</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-
 <body>
 
-<header>Central de Atendimento</header>
-
+<header>
+    Central de Atendimento
+</header>
 <nav>
-
-    <a href="index.php">
-        <i class="fa-solid fa-sliders"></i> Painel
-    </a>
-
-    <a href="protocolos.php">
-        <i class="fa-solid fa-file-lines"></i> Protocolos
-    </a>
-
-    <a href="agendamento.php">
-        <i class="fa-regular fa-calendar"></i> Visitas
-    </a>
-
-    <a href="historico.php">
-        <i class="fa-regular fa-calendar-days"></i> Histórico
-    </a>
-
     <a href="perfil.php">
-        <i class="fa-regular fa-address-card"></i> Perfil
+        <i class="fa-regular fa-address-card"></i>
+        Perfil
     </a>
-
+    <a href="painel.php">
+        <i class="fa-solid fa-sliders"></i>
+        Painel
+    </a>
+    <a href="protocolos.php">
+        <i class="fa-solid fa-file-lines"></i>
+        Protocolos
+    </a>
+    <a href="agendamento.php">
+        <i class="fa-regular fa-calendar"></i>
+        Agendamento
+    </a>
+    <a href="historico.php">
+        <i class="fa-regular fa-calendar-days"></i>
+        Histórico
+    </a>
     <a href="logout.php">
-        <i class="fa-solid fa-right-from-bracket"></i> Sair
+        <i class="fa-solid fa-right-from-bracket"></i>
+        Sair
     </a>
-
 </nav>
 
 <main>
-
-<h1>Meus Protocolos</h1>
+    <h1>Meus Protocolos</h1>
 
 <form method="POST">
 
