@@ -36,7 +36,8 @@ $historico = $stmt->get_result();
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
-.cronograma{background:white;border-radius:10px;box-shadow:0 2px 8px #ddd;overflow:hidden}
+.cronograma{
+    background:white;border-radius:10px;box-shadow:0 2px 8px #ddd;overflow:hidden}
 .cronograma div{padding:18px;border-bottom:1px solid #eee}
 .cronograma div:last-child{border:0}
 .cronograma h3{color:#3157d5;margin-bottom:10px}

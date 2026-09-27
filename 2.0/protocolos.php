@@ -69,7 +69,6 @@ $resultado = $stmt->get_result();
 <head>
     <meta charset="UTF-8">
     <title>Protocolos | ConectaNet</title>
-
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -81,81 +80,66 @@ $resultado = $stmt->get_result();
 <main>
     <h1>Meus Protocolos</h1>
 
+    <!-- Início -->
     <form method="POST">
         <select name="descricao" id="tipo" onchange="outroCampo()" required>
-            <option value="">Escolha o problema</option>
-            <option></option>
-            <option>Sem sinal</option>
+            <option value="">Selicione o problema</option>
+            <option>Problema com a internet</option>
+            <option>Computador não liga</option>
+            <option>Mouse ou teclado não funciona</option>
+            <option>Solicitação de manutenção</option>
             <option value="Outro">Outro</option>
         </select>
-        
-        <input
-        type="text"
-        name="outro"
-        id="outro"
-        placeholder="Digite o problema"
+        <input 
+        type="text" 
+        name="outro" 
+        id="outro" 
+        placeholder="Digite o problema" 
         style="display:none">
 
-<button>
-    Abrir protocolo
-</button>
+        <button>
+            Abrir protocolo
+        </button>
+    </form>
+    <!-- Fim -->
 
-</form>
-
-<table>
-
-<tr>
-
-<th>Protocolo</th>
-<th>Problema</th>
-<th>Data e hora</th>
-<th>Status</th>
-<th>Ações</th>
-
-</tr>
-
-<?php while ($p = $resultado->fetch_assoc()) { ?>
-
-<tr>
-
-<td>#<?= $p["id_chamado"] ?></td>
-
-<td><?= htmlspecialchars($p["descricao"]) ?></td>
-
-<td><?= date("d/m/Y H:i", strtotime($p["data_abertura"])) ?></td>
-
-<td><?= $p["status"] ?></td>
-
-<td>
-
-<a href="editar.php?id=<?= $p["id_chamado"] ?>">Editar</a> |
-
-<a href="protocolos.php?excluir=<?= $p["id_chamado"] ?>"
-onclick="return confirm('Excluir protocolo?')">Excluir</a>
-
-</td>
-
-</tr>
-
-<?php } ?>
-
-</table>
+    <!-- Status -->
+    <table>
+        <tr>
+            <th>Protocolo</th>
+            <th>Problema</th>
+            <th>Data e hora</th>
+            <th>Status</th>
+            <th>Ações</th>
+        </tr>
+        <?php while ($p = $resultado->fetch_assoc()) { ?>
+        <tr>
+            <td>#<?= $p["id_chamado"] ?></td>
+            <td><?= htmlspecialchars($p["descricao"]) ?></td>
+            <td><?= date("d/m/Y H:i", strtotime($p["data_abertura"])) ?></td>
+            <td><?= $p["status"] ?></td>
+            <td>
+                <a href="editar.php?id=<?= $p["id_chamado"] ?>">
+                    Editar
+                </a>
+                <a href="protocolos.php?excluir=<?= $p["id_chamado"] ?>" onclick="return confirm('Excluir protocolo?')">
+                    Excluir
+                </a>
+            </td>
+        </tr>
+        <?php } ?>
+    </table>
 
 </main>
 
 <script>
-
 function outroCampo() {
-
     let tipo = document.getElementById("tipo");
     let outro = document.getElementById("outro");
 
     outro.style.display = tipo.value == "Outro" ? "block" : "none";
-
 }
-
 </script>
 
 </body>
-
 </html>
