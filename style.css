@@ -1,0 +1,1039 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f5f7fb;
+    color: #202b35;
+}
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+header {
+    height: 60px;
+    background: #3157d5;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+    font-size: 20px;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* =========================
+   MENU
+========================= */
+
+nav {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 210px;
+    height: calc(100vh - 60px);
+    background: #202b35;
+    padding-top: 15px;
+    z-index: 999;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    padding: 14px 20px;
+    color: white;
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+nav a:hover {
+    background: #3157d5;
+    padding-left: 25px;
+}
+
+nav i {
+    width: 25px;
+    margin-right: 8px;
+}
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+main {
+    margin-left: 210px;
+    padding: 90px 30px 30px;
+}
+
+h1 {
+    margin-bottom: 25px;
+    color: #202b35;
+}
+
+h2,
+h3 {
+    margin-bottom: 10px;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    transition: 0.25s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.card h3 {
+    color: #555;
+    font-size: 16px;
+}
+
+.card h2 {
+    color: #3157d5;
+    font-size: 25px;
+}
+
+/* =========================
+   FORMULÁRIOS
+========================= */
+
+form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+select,
+input {
+    padding: 12px;
+    border: 1px solid #d5d9e2;
+    border-radius: 7px;
+    background: white;
+    outline: none;
+    transition: 0.2s;
+}
+
+select {
+    width: 300px;
+}
+
+input {
+    width: 300px;
+}
+
+select:focus,
+input:focus {
+    border-color: #3157d5;
+    box-shadow: 0 0 0 3px rgba(49, 87, 213, 0.1);
+}
+
+/* =========================
+   BOTÕES
+========================= */
+
+button {
+    background: #3157d5;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.25s;
+}
+
+button:hover {
+    background: #2546b5;
+    transform: translateY(-1px);
+}
+
+/* =========================
+   TABELAS
+========================= */
+
+table {
+    width: 100%;
+    background: white;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+th {
+    background: #202b35;
+    color: white;
+    padding: 14px;
+    text-align: left;
+}
+
+td {
+    padding: 13px;
+    border-bottom: 1px solid #eee;
+}
+
+tr:hover {
+    background: #f5f7fb;
+}
+
+td a {
+    color: #3157d5;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   LOGIN
+========================= */
+
+.login {
+    width: 420px;
+    max-width: 90%;
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    margin: 80px auto;
+    text-align: center;
+}
+
+/* Logo CN */
+
+.login .logo {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 18px;
+    background: #3157d5;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.login h1 {
+    color: #3157d5;
+    margin-bottom: 5px;
+    font-size: 28px;
+}
+
+.login h2 {
+    color: #202b35;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.login .bem-vindo {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+/* Formulário */
+
+.login form {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.login input {
+    width: 100%;
+    height: 45px;
+    padding: 0 14px;
+    font-size: 14px;
+}
+
+/* Senha */
+
+.senha-container {
+    position: relative;
+    width: 100%;
+}
+
+.senha-container input {
+    padding-right: 75px;
+}
+
+.mostrar {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto !important;
+    padding: 5px !important;
+    background: transparent !important;
+    color: #3157d5 !important;
+    font-size: 12px;
+}
+
+.mostrar:hover {
+    background: transparent !important;
+    transform: translateY(-50%);
+}
+
+/* Botão entrar */
+
+.login .entrar {
+    width: 100%;
+    height: 45px;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+/* Erro */
+
+.erro {
+    background: #fff0f0;
+    color: #2838c6;
+    border: 1px solid #ffcaca;
+    padding: 11px;
+    border-radius: 7px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* Cadastro */
+
+.login .cadastro {
+    margin-top: 20px;
+    color: #666;
+    font-size: 14px;
+}
+
+.login a {
+    color: #3157d5;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login a:hover {
+    text-decoration: underline;
+}
+
+/* Status */
+
+.status {
+    margin-top: 22px;
+    font-size: 13px;
+    color: #555;
+}
+
+footer {
+    margin-top: 25px;
+    font-size: 12px;
+    color: #999;
+}
+
+/* =========================
+   PERFIL
+========================= */
+
+.perfil {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    max-width: 600px;
+}
+
+.perfil p {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.perfil strong {
+    color: #3157d5;
+}
+
+.acoes {
+    margin-top: 20px;
+}
+
+.acoes a {
+    display: inline-block;
+    background: #3157d5;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 7px;
+    text-decoration: none;
+    margin-right: 8px;
+    transition: 0.2s;
+}
+
+.acoes a:hover {
+    background: #2546b5;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 900px) {
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    nav {
+        width: 170px;
+    }
+
+    main {
+        margin-left: 170px;
+        padding: 80px 15px 20px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    select,
+    input {
+        width: 100%;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+
+    .login {
+        margin: 50px auto;
+        padding: 30px 20px;
+    }
+
+}
+
+/* ==========================================================================
+   PÁGINA INICIAL (home.php)
+   Tudo aqui vive dentro de .pagina-inicial para não interferir no
+   layout do painel/login, que usam header, nav, footer etc. diferentes.
+========================================================================== */
+
+.pagina-inicial{
+    --azul: #3157d5;
+    --azul-escuro: #1f3fae;
+    --azul-claro: #eef2ff;
+    --texto: #202b35;
+    --texto-suave: #64708a;
+    --borda: #e6e9f5;
+    background: #ffffff;
+    color: var(--texto);
+}
+
+.pagina-inicial a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.pagina-inicial img{
+    max-width: 100%;
+    display: block;
+}
+
+.pagina-inicial .container{
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+.pagina-inicial .btn{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 26px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.pagina-inicial .btn-azul{
+    background: var(--azul);
+    color: white;
+}
+
+.pagina-inicial .btn-azul:hover{
+    background: var(--azul-escuro);
+}
+
+/* Topo */
+
+.pagina-inicial .topo{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: white;
+    border-bottom: 1px solid var(--borda);
+}
+
+.pagina-inicial .topo .container{
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pagina-inicial .marca{
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--azul);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pagina-inicial .topo nav{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.pagina-inicial .link-entrar{
+    font-weight: bold;
+    color: var(--texto);
+}
+
+/* Hero */
+
+.pagina-inicial .hero{
+    background: linear-gradient(180deg, var(--azul-claro) 0%, #ffffff 75%);
+    padding: 70px 0 90px;
+    overflow: hidden;
+}
+
+.pagina-inicial .hero .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.pagina-inicial .hero-tag{
+    color: var(--azul);
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 14px;
+}
+
+.pagina-inicial .hero h1{
+    font-size: 42px;
+    line-height: 1.2;
+    color: var(--texto);
+    margin-bottom: 20px;
+}
+
+.pagina-inicial .hero h1 span{
+    color: var(--azul);
+}
+
+.pagina-inicial .hero p{
+    color: var(--texto-suave);
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 480px;
+    margin-bottom: 28px;
+}
+
+.pagina-inicial .hero-rodape{
+    margin-top: 18px;
+    font-size: 13px;
+    color: var(--texto-suave);
+}
+
+.pagina-inicial .mockup-wrap{
+    position: relative;
+}
+
+.pagina-inicial .mockup{
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 25px 60px rgba(49,87,213,.18);
+    overflow: hidden;
+    border: 1px solid var(--borda);
+}
+
+.pagina-inicial .mockup-topo{
+    background: var(--azul);
+    color: white;
+    padding: 12px 18px;
+    font-weight: bold;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pagina-inicial .mockup-corpo{
+    padding: 18px;
+}
+
+.pagina-inicial .mockup-corpo h4{
+    font-size: 13px;
+    color: var(--texto-suave);
+    margin-bottom: 12px;
+}
+
+.pagina-inicial .chamado-linha{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    border-radius: 8px;
+    background: #f7f8fc;
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+.pagina-inicial .badge{
+    font-size: 11px;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.pagina-inicial .badge.andamento{ background:#fff2d9; color:#a86500; }
+.pagina-inicial .badge.resolvido{ background:#d9f4e3; color:#1c8a4f; }
+.pagina-inicial .badge.aberto{ background:#e4e9ff; color:#3157d5; }
+
+.pagina-inicial .balao{
+    position: absolute;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 12px 30px rgba(0,0,0,.12);
+    padding: 12px 16px;
+    font-size: 12px;
+    max-width: 190px;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.pagina-inicial .balao i{
+    color: var(--azul);
+    font-size: 16px;
+    margin-top: 2px;
+}
+
+.pagina-inicial .balao strong{
+    display: block;
+    font-size: 13px;
+    margin-bottom: 2px;
+}
+
+.pagina-inicial .balao.b1{ top: -18px; left: -20px; }
+.pagina-inicial .balao.b2{ top: -18px; right: -20px; }
+
+/* Seções gerais */
+
+.pagina-inicial .secao{
+    padding: 80px 0;
+}
+
+.pagina-inicial .secao.cinza{
+    background: var(--azul-claro);
+}
+
+.pagina-inicial .titulo-secao{
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.pagina-inicial .titulo-secao .eyebrow{
+    color: var(--azul);
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.pagina-inicial .titulo-secao h2{
+    font-size: 30px;
+}
+
+.pagina-inicial .titulo-secao p{
+    color: var(--texto-suave);
+    margin-top: 8px;
+}
+
+/* Contato */
+
+.pagina-inicial .contato-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.pagina-inicial .contato-item{
+    display: flex;
+    gap: 14px;
+    margin-bottom: 22px;
+}
+
+.pagina-inicial .contato-item i{
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: white;
+    color: var(--azul);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagina-inicial .contato-item strong{
+    display: block;
+    margin-bottom: 4px;
+}
+
+.pagina-inicial .contato-item span{
+    color: var(--texto-suave);
+    font-size: 14px;
+}
+
+.pagina-inicial .form-contato{
+    background: white;
+    border-radius: 14px;
+    padding: 30px;
+    box-shadow: 0 15px 40px rgba(49,87,213,.1);
+}
+
+.pagina-inicial .form-contato label{
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--texto-suave);
+    margin: 14px 0 6px;
+}
+
+.pagina-inicial .form-contato label:first-child{
+    margin-top: 0;
+}
+
+.pagina-inicial .form-contato input,
+.pagina-inicial .form-contato textarea{
+    width: 100%;
+    padding: 11px 13px;
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.pagina-inicial .form-contato textarea{
+    resize: vertical;
+    min-height: 90px;
+}
+
+.pagina-inicial .form-contato .btn{
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+}
+
+/* Depoimentos */
+
+.pagina-inicial .depoimentos-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.pagina-inicial .depoimento{
+    background: var(--azul-claro);
+    border-radius: 14px;
+    padding: 28px;
+}
+
+.pagina-inicial .depoimento i.aspas{
+    color: var(--azul);
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.pagina-inicial .depoimento p{
+    color: var(--texto);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.pagina-inicial .autor{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.pagina-inicial .autor .avatar{
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--azul);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.pagina-inicial .autor strong{
+    display: block;
+    font-size: 13px;
+}
+
+.pagina-inicial .autor span{
+    font-size: 12px;
+    color: var(--texto-suave);
+}
+
+/* Rodapé */
+
+.pagina-inicial footer.principal{
+    background: #14204d;
+    color: #c7cff2;
+    padding: 55px 0 25px;
+}
+
+.pagina-inicial .rodape-grid{
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr 1fr;
+    gap: 30px;
+    padding-bottom: 35px;
+    border-bottom: 1px solid rgba(255,255,255,.12);
+}
+
+.pagina-inicial .rodape-grid .marca{
+    color: white;
+    margin-bottom: 10px;
+}
+
+.pagina-inicial .rodape-grid p{
+    font-size: 13px;
+    line-height: 1.6;
+    max-width: 260px;
+}
+
+.pagina-inicial .rodape-grid h4{
+    color: white;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.pagina-inicial .rodape-grid a,
+.pagina-inicial .rodape-grid li{
+    display: block;
+    font-size: 13px;
+    margin-bottom: 10px;
+    list-style: none;
+}
+
+.pagina-inicial .rodape-grid a:hover{
+    color: white;
+}
+
+.pagina-inicial .redes{
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.pagina-inicial .redes a{
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagina-inicial .rodape-baixo{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    font-size: 12px;
+}
+
+/* Responsivo */
+
+@media (max-width: 860px){
+    .pagina-inicial .hero .container{ grid-template-columns: 1fr; }
+    .pagina-inicial .hero{ padding-top: 40px; }
+    .pagina-inicial .mockup-wrap{ margin-top: 40px; }
+    .pagina-inicial .balao{ display: none; }
+    .pagina-inicial .contato-grid{ grid-template-columns: 1fr; }
+    .pagina-inicial .depoimentos-grid{ grid-template-columns: 1fr; }
+    .pagina-inicial .rodape-grid{ grid-template-columns: 1fr 1fr; }
+}
+
+/* CORREÇÃO DA PÁGINA INICIAL CONECTANET */
+
+.pagina-inicial header.topo {
+    position: sticky;
+    top: 0;
+    left: auto;
+    right: auto;
+    height: auto;
+    width: 100%;
+    z-index: 100;
+    padding: 0;
+    background: #fff;
+    color: #202b35;
+}
+
+/* Remove a barra lateral do painel */
+.pagina-inicial .topo nav {
+    position: static;
+    top: auto;
+    left: auto;
+    width: auto;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    z-index: auto;
+}
+
+/* Remove o espaço reservado ao menu lateral */
+.pagina-inicial main {
+    margin-left: 0;
+}
+
+/* CABEÇALHO DA PÁGINA INICIAL */
+
+.pagina-inicial .topo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100px;
+    padding: 0 40px;
+
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    box-sizing: border-box;
+}
+
+/* LOGO CENTRALIZADA */
+
+.pagina-inicial .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #3155d9;
+    font-size: 27px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* BOTÕES LADO A LADO */
+
+.pagina-inicial .botoes-topo {
+    position: absolute;
+    right: 40px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.pagina-inicial .btn-entrar,
+.pagina-inicial .btn-criar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 22px;
+    border-radius: 8px;
+
+    background: #3155d9;
+    color: white;
+
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.pagina-inicial .btn-entrar:hover,
+.pagina-inicial .btn-criar:hover {
+    background: #203da8;
+    transform: translateY(-2px);
+}
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+    .pagina-inicial .topo {
+        height: 130px;
+        padding: 10px;
+    }
+
+    .pagina-inicial .logo {
+        top: 15px;
+        font-size: 22px;
+    }
+
+    .pagina-inicial .botoes-topo {
+        top: 75px;
+        right: 0;
+        left: 0;
+        justify-content: center;
+    }
+
+    .pagina-inicial .btn-entrar,
+    .pagina-inicial .btn-criar {
+        padding: 10px 14px;
+        font-size: 12px;
+    }
+}
