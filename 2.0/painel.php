@@ -97,7 +97,7 @@ require_once "conexao.php";
         Olá, <?php echo htmlspecialchars($nome); ?>!
     </h1>
 
-    
+    <!-- Início Cards-->
     <div class="cards">
         <div class="card">
             <h3>Protocolos abertos</h3>
@@ -118,6 +118,7 @@ require_once "conexao.php";
             </h2>
         </div>
     </div>
+    <!-- Fim Cards-->
 
     <h3>Últimos Protocolos</h3>
     <table>
@@ -140,6 +141,7 @@ require_once "conexao.php";
             </tr>
         <?php } ?>
     </table>
+    
 </main>
 
 </body>
