@@ -76,48 +76,15 @@ $resultado = $stmt->get_result();
 </head>
 <body>
 
-<header>
-    Central de Atendimento
-</header>
-<nav>
-    <a href="perfil.php">
-        <i class="fa-regular fa-address-card"></i>
-        Perfil
-    </a>
-    <a href="painel.php">
-        <i class="fa-solid fa-sliders"></i>
-        Painel
-    </a>
-    <a href="protocolos.php">
-        <i class="fa-solid fa-file-lines"></i>
-        Protocolos
-    </a>
-    <a href="agendamento.php">
-        <i class="fa-regular fa-calendar"></i>
-        Agendamento
-    </a>
-    <a href="historico.php">
-        <i class="fa-regular fa-calendar-days"></i>
-        Histórico
-    </a>
-    <a href="logout.php">
-        <i class="fa-solid fa-right-from-bracket"></i>
-        Sair
-    </a>
-</nav>
+<?php include "menu.php"; ?>
 
 <main>
     <h1>Meus Protocolos</h1>
-
-<form method="POST">
-
-<select name="descricao" id="tipo" onchange="outroCampo()" required>
-
-<option value="">Escolha o problema</option>
-
-<option>Problema com internet</option>
-
-<option>Internet lenta</option>
+    <form method="POST">
+        <select name="descricao" id="tipo" onchange="outroCampo()" required>
+            <option value="">Escolha o problema</option>
+            <option>Problema com internet</option>
+            <option>Internet lenta</option>
 
 <option>Sem sinal</option>
 
