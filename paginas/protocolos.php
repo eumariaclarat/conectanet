@@ -70,8 +70,7 @@ $resultado = $stmt->get_result();
     <meta charset="UTF-8">
     <title>Protocolos | ConectaNet</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
 
@@ -90,13 +89,7 @@ $resultado = $stmt->get_result();
             <option>Solicitação de manutenção</option>
             <option value="Outro">Outro</option>
         </select>
-        <input 
-        type="text" 
-        name="outro" 
-        id="outro" 
-        placeholder="Digite o problema" 
-        style="display:none">
-
+        <input type="text" name="outro" id="outro" placeholder="Digite o problema" style="display:none">
         <button>
             Abrir protocolo
         </button>

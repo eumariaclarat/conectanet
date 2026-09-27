@@ -162,6 +162,5 @@ $cliente = $stmt->get_result()->fetch_assoc();
 }
 </style>
 
-
 </body>
 </html>
