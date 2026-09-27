@@ -80,34 +80,25 @@ $resultado = $stmt->get_result();
 
 <main>
     <h1>Meus Protocolos</h1>
+
     <form method="POST">
         <select name="descricao" id="tipo" onchange="outroCampo()" required>
             <option value="">Escolha o problema</option>
-            <option>Problema com internet</option>
-            <option>Internet lenta</option>
+            <option></option>
+            <option>Sem sinal</option>
+            <option value="Outro">Outro</option>
+        </select>
+        
+        <input
+        type="text"
+        name="outro"
+        id="outro"
+        placeholder="Digite o problema"
+        style="display:none">
 
-<option>Sem sinal</option>
-
-<option>Problema com ligação</option>
-
-<option>Problema com TV</option>
-
-<option>Problema com fatura</option>
-
-<option>Problema no aplicativo</option>
-
-<option value="Outro">Outro</option>
-
-</select>
-
-<input
-type="text"
-name="outro"
-id="outro"
-placeholder="Digite o problema"
-style="display:none">
-
-<button>Abrir protocolo</button>
+<button>
+    Abrir protocolo
+</button>
 
 </form>
 
