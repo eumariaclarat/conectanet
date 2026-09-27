@@ -22,7 +22,7 @@ $pagina_atual = $pagina_atual ?? "";
         <i class="fa-regular fa-address-card"></i> Perfil
     </a>
     <a href="agendamento.php" class="<?= $pagina_atual === 'agendamento' ? 'ativo' : '' ?>">
-        <i class="fa-regular fa-calendar"></i> Agendamentos
+        <i class="fa-regular fa-calendar"></i> Agendamento
     </a>
     <a href="historico.php" class="<?= $pagina_atual === 'historico' ? 'ativo' : '' ?>">
         <i class="fa-regular fa-calendar-days"></i> Histórico

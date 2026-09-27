@@ -30,6 +30,61 @@ $cliente = $stmt->get_result()->fetch_assoc();
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
+</head>
+<body>
+
+<?php include "menu.php"; ?>
+
+<main>
+    <h1>Meu Perfil</h1>
+    <div class="perfil-box">
+
+        <!-- Início Perfil -->
+        <div class="perfil-topo">
+            <div class="avatar">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <h2><?=htmlspecialchars($cliente["nome"])?></h2>
+            <p>Cliente ConectaNet</p>
+        </div>
+
+        <!-- Início Dados -->
+        <div class="dados">
+            <div class="dado">
+                <i class="fa-solid fa-id-card"></i>
+                <div>
+                    <span>CPF</span>
+                    <strong><?=htmlspecialchars($cliente["cpf"])?></strong>
+                </div>
+            </div>
+            <div class="dado">
+                <i class="fa-solid fa-envelope"></i>
+                <div>
+                    <span>E-mail</span>
+                    <strong><?=htmlspecialchars($cliente["email"])?></strong>
+                </div>
+            </div>
+            <div class="dado">
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                    <span>Telefone</span>
+                    <strong><?=htmlspecialchars($cliente["telefone"])?></strong>
+                </div>
+            </div>
+            <div class="dado">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                    <span>Endereço</span>
+                    <strong><?=htmlspecialchars($cliente["endereco"])?></strong>
+                </div>
+            </div>
+        </div>
+        <!-- Fim Dados -->
+
+    </div>
+
+</main>
+
 <style>
 
 .perfil-box{
@@ -107,60 +162,6 @@ $cliente = $stmt->get_result()->fetch_assoc();
 }
 </style>
 
-</head>
-<body>
-
-<?php include "menu.php"; ?>
-
-<main>
-    <h1>Meu Perfil</h1>
-    <div class="perfil-box">
-
-        <!-- Início Perfil -->
-        <div class="perfil-topo">
-            <div class="avatar">
-                <i class="fa-solid fa-user"></i>
-            </div>
-            <h2><?=htmlspecialchars($cliente["nome"])?></h2>
-            <p>Cliente ConectaNet</p>
-        </div>
-
-        <!-- Início Dados -->
-        <div class="dados">
-            <div class="dado">
-                <i class="fa-solid fa-id-card"></i>
-                <div>
-                    <span>CPF</span>
-                    <strong><?=htmlspecialchars($cliente["cpf"])?></strong>
-                </div>
-            </div>
-            <div class="dado">
-                <i class="fa-solid fa-envelope"></i>
-                <div>
-                    <span>E-mail</span>
-                    <strong><?=htmlspecialchars($cliente["email"])?></strong>
-                </div>
-            </div>
-            <div class="dado">
-                <i class="fa-solid fa-phone"></i>
-                <div>
-                    <span>Telefone</span>
-                    <strong><?=htmlspecialchars($cliente["telefone"])?></strong>
-                </div>
-            </div>
-            <div class="dado">
-                <i class="fa-solid fa-location-dot"></i>
-                <div>
-                    <span>Endereço</span>
-                    <strong><?=htmlspecialchars($cliente["endereco"])?></strong>
-                </div>
-            </div>
-        </div>
-        <!-- Fim Dados -->
-
-    </div>
-
-</main>
 
 </body>
 </html>
