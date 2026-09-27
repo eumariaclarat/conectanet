@@ -1,44 +1,14 @@
 <?php
 require "verifica_login.php";
 
-$status_visita_validos = ["pendente", "em_analise", "realizada"];
-
-// Funcionário edita o técnico responsável e o status da visita
-if ($tipo === "funcionario" && $_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["id_agendamento"])) {
-
-    $id_agendamento = (int) $_POST["id_agendamento"];
-    $tecnico = trim($_POST["tecnico"] ?? "");
-    $status = $_POST["status"] ?? "pendente";
-
-    if (!in_array($status, $status_visita_validos, true)) {
-        $status = "pendente";
-    }
-
-    if ($tecnico === "") {
-        $tecnico = "A definir";
-    }
-
-    $stmt = $conexao->prepare(
-        "UPDATE agendamento SET tecnico = ?, status = ? WHERE id_agendamento = ?"
-    );
-
-    if ($stmt) {
-        $stmt->bind_param("ssi", $tecnico, $status, $id_agendamento);
-        $stmt->execute();
-    }
-
-    header("Location: agendamento.php");
-    exit;
-}
-
 if ($tipo === "cliente" && $_SERVER["REQUEST_METHOD"] == "POST") {
 
     $data = $_POST["data"];
     $horario = $_POST["horario"];
 
     $stmt = $conexao->prepare(
-        "INSERT INTO agendamento (data, horario, tecnico, status)
-         VALUES (?, ?, 'A definir', 'pendente')"
+        "INSERT INTO agendamento (data, horario, tecnico)
+         VALUES (?, ?, 'A definir')"
     );
     $stmt->bind_param("ss", $data, $horario);
     $stmt->execute();
@@ -115,12 +85,6 @@ if ($tipo === "cliente") {
 
 $visitas = $stmt->get_result();
 
-$rotulo_status_visita = [
-    "pendente"   => "Pendente",
-    "em_analise" => "Em análise",
-    "realizada"  => "Visita realizada",
-];
-
 $pagina_atual = "agendamento";
 ?>
 
@@ -139,14 +103,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 .visita{background:white;padding:20px;border-radius:10px;box-shadow:0 2px 8px #ddd;margin-bottom:15px}
 .visita h2{color:#3157d5;margin-bottom:12px}
 .visita p{margin:8px 0}
-.badge-visita{display:inline-block;font-size:12px;font-weight:bold;padding:4px 10px;border-radius:20px}
-.badge-visita.pendente{background:#fff2d9;color:#a86500}
-.badge-visita.em_analise{background:#e4e9ff;color:#3157d5}
-.badge-visita.realizada{background:#d9f4e3;color:#1c8a4f}
-.editar-visita-form{margin-top:14px;padding-top:14px;border-top:1px solid #eee;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-.editar-visita-form input,
-.editar-visita-form select{padding:8px 10px;border:1px solid #d5d9e2;border-radius:7px;width:auto}
-.editar-visita-form button{font-size:13px;padding:8px 14px}
 </style>
 </head>
 
@@ -218,48 +174,11 @@ Visita técnica
 <?= date("H:i", strtotime($v["horario"])) ?>
 </p>
 
-<?php if ($tipo === "cliente") { ?>
 <p>
 <i class="fa-solid fa-user-gear"></i>
 <strong>Atendido por:</strong>
 <?= htmlspecialchars($v["tecnico"]) ?>
 </p>
-<?php } ?>
-
-<p>
-<i class="fa-solid fa-circle-check"></i>
-<strong>Status:</strong>
-<span class="badge-visita <?= $v["status"] ?>">
-<?= $rotulo_status_visita[$v["status"]] ?? htmlspecialchars($v["status"]) ?>
-</span>
-</p>
-
-<?php if ($tipo === "funcionario") { ?>
-
-<form method="POST" class="editar-visita-form">
-<input type="hidden" name="id_agendamento" value="<?= $v["id_agendamento"] ?>">
-
-<input
-    type="text"
-    name="tecnico"
-    value="<?= htmlspecialchars($v["tecnico"]) ?>"
-    placeholder="Nome do técnico"
->
-
-<select name="status">
-    <option value="pendente" <?= $v["status"] === "pendente" ? "selected" : "" ?>>Pendente</option>
-    <option value="em_analise" <?= $v["status"] === "em_analise" ? "selected" : "" ?>>Em análise</option>
-    <option value="realizada" <?= $v["status"] === "realizada" ? "selected" : "" ?>>Visita realizada</option>
-</select>
-
-<button type="submit">
-<i class="fa-solid fa-floppy-disk"></i>
-Salvar
-</button>
-
-</form>
-
-<?php } ?>
 
 </div>
 

@@ -24,10 +24,6 @@ $pagina_atual = $pagina_atual ?? "";
         <i class="fa-solid fa-file-lines"></i> Protocolos
     </a>
 
-    <a href="agendamento.php" class="<?= $pagina_atual === 'agendamento' ? 'ativo' : '' ?>">
-        <i class="fa-regular fa-calendar"></i> Visitas
-    </a>
-
 <?php } else if ($tipo === "funcionario") { ?>
 
     <a href="perfil.php" class="<?= $pagina_atual === 'perfil' ? 'ativo' : '' ?>">
