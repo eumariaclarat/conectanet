@@ -66,6 +66,10 @@ $atendimentos = $stmt->get_result();
     Central de Atendimento
 </header>
 <nav>
+    <a href="perfil.php">
+        <i class="fa-regular fa-address-card"></i>
+        Perfil
+    </a>
     <a href="index.php">
         <i class="fa-solid fa-sliders"></i>
         Painel
@@ -82,16 +86,15 @@ $atendimentos = $stmt->get_result();
         <i class="fa-regular fa-calendar-days"></i>
         Histórico
     </a>
-    <a href="perfil.php">
-        <i class="fa-regular fa-address-card"></i>
-        Perfil
-    </a>
     <a href="logout.php">
         <i class="fa-solid fa-right-from-bracket"></i>
         Sair
     </a>
 </nav>
+
+
 <main>
+    <!-- Painel -->
     <h1>
         Olá, <?php echo htmlspecialchars($nome); ?>!
     </h1>
@@ -115,6 +118,7 @@ $atendimentos = $stmt->get_result();
             </h2>
         </div>
     </div>
+
     <h3>Últimos Protocolos</h3>
     <table>
         <tr>
@@ -133,10 +137,10 @@ $atendimentos = $stmt->get_result();
                 <td>
                     <?php echo htmlspecialchars($p["status"]); ?>
                 </td>
-
             </tr>
         <?php } ?>
     </table>
 </main>
+
 </body>
 </html>

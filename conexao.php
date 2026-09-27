@@ -1,5 +1,4 @@
 <?php
-
 // Evita que uma falha de conexão gere uma exceção não tratada (Fatal error)
 mysqli_report(MYSQLI_REPORT_OFF);
 
