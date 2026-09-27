@@ -31,7 +31,8 @@ CREATE TABLE agendamento (
     id_agendamento INT AUTO_INCREMENT PRIMARY KEY,
     data DATE NOT NULL,
     horario TIME NOT NULL,
-    tecnico VARCHAR(100)
+    tecnico VARCHAR(100),
+    realizada TINYINT(1) NOT NULL DEFAULT 0
 );
 
 CREATE TABLE fatura (
@@ -72,6 +73,9 @@ CREATE TABLE possui (
     FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente),
     FOREIGN KEY (id_fatura) REFERENCES fatura(id_fatura)
 );
+
+-- Caso o banco já exista sem a coluna abaixo, rode esta linha manualmente:
+-- ALTER TABLE agendamento ADD COLUMN realizada TINYINT(1) NOT NULL DEFAULT 0;
 
 DESC cliente;
 DESC funcionario;

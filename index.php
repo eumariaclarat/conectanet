@@ -1,18 +1,14 @@
 <?php
+/**
+ * Ponto de entrada do site.
+ * Quem não está logado vê a página inicial (home.php).
+ * Quem já está logado (cliente ou funcionário) vai direto para o perfil.
+ */
 session_start();
-require_once "conexao.php";
-?>
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ConectaNet | Central de Atendimento</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-</head>
-<body>
-
-</body>
-</html>
+if (isset($_SESSION["tipo"])) {
+    header("Location: perfil.php");
+} else {
+    header("Location: home.php");
+}
+exit;

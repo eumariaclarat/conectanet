@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-if (isset($_SESSION["id_cliente"])) {
-    header("Location: index.php");
+if (isset($_SESSION["tipo"])) {
+    header("Location: perfil.php");
     exit;
 }
 ?>
@@ -21,7 +21,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 <header class="topo">
     <a href="home.php" class="logo">
-        <i class="fa-solid fa-headset"></i>
         ConectaNet
     </a>
 
@@ -30,7 +29,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
             ENTRAR
         </a>
 
-        <a href="login.php" class="btn-criar">
+        <a href="cadastro.php" class="btn-criar">
             CADASTRA-SE
         </a>
     </div>
@@ -71,9 +70,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
                 </div>
             </div>
 
+            <div class="mockup-dots"></div>
+
             <div class="mockup">
                 <div class="mockup-topo">
-                    <i class="fa-solid fa-headset"></i> ConectaNet
+                    ConectaNet
                 </div>
                 <div class="mockup-corpo">
                     <h4>Meus chamados</h4>
@@ -230,15 +231,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
             <div>
                 <div class="marca">
-                    <i class="fa-solid fa-headset"></i> ConectaNet
+                    ConectaNet
                 </div>
                 <p>Chamados mais simples, soluções mais rápidas.</p>
-                <div class="redes">
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                </div>
             </div>
 
             <div>
@@ -255,26 +250,26 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
             </div>
 
             <div class="footer-col">
-                <h3>Siga-nos</h3>
+                <h4>Siga-nos</h4>
 
-            <div class="social-icons">
-                <a href="#" aria-label="Instagram">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
 
-            <a href="#" aria-label="LinkedIn">
-                <i class="fa-brands fa-linkedin-in"></i>
-            </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
 
-            <a href="#" aria-label="YouTube">
-                <i class="fa-brands fa-youtube"></i>
-            </a>
+                    <a href="#" aria-label="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
 
-            <a href="#" aria-label="X">
-                <i class="fa-brands fa-x-twitter"></i>
-            </a>
-        </div>
-    </div>
+                    <a href="#" aria-label="X">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                </div>
+            </div>
 
         </div>
 

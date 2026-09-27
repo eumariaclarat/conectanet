@@ -1,9 +1,8 @@
 <?php
-session_start();
-include "conexao.php";
+require "verifica_login.php";
 
-if (!isset($_SESSION["id_cliente"])) {
-    header("Location: login.php");
+if ($tipo !== "cliente") {
+    header("Location: historico.php");
     exit;
 }
 
@@ -12,8 +11,7 @@ if (!isset($_GET["id"])) {
     exit;
 }
 
-$id = (int) $_GET["id"];
-$id_cliente = $_SESSION["id_cliente"];
+$id_chamado = (int) $_GET["id"];
 
 if (isset($_POST["descricao"])) {
 
@@ -26,7 +24,7 @@ if (isset($_POST["descricao"])) {
             AND abre.id_cliente = ?";
 
     $stmt = $conexao->prepare($sql);
-    $stmt->bind_param("sii", $descricao, $id, $id_cliente);
+    $stmt->bind_param("sii", $descricao, $id_chamado, $id);
     $stmt->execute();
 
     header("Location: protocolos.php");
@@ -40,7 +38,7 @@ $sql = "SELECT chamado.descricao
         AND abre.id_cliente = ?";
 
 $stmt = $conexao->prepare($sql);
-$stmt->bind_param("ii", $id, $id_cliente);
+$stmt->bind_param("ii", $id_chamado, $id);
 $stmt->execute();
 
 $p = $stmt->get_result()->fetch_assoc();
@@ -49,9 +47,27 @@ if (!$p) {
     header("Location: protocolos.php");
     exit;
 }
+
+$pagina_atual = "protocolos";
 ?>
 
-<h1>Editar Protocolo #<?= $id ?></h1>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Editar Protocolo | ConectaNet</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<?php include "menu.php"; ?>
+
+<main>
+
+<h1>Editar Protocolo #<?= $id_chamado ?></h1>
 
 <form method="POST">
 
@@ -62,8 +78,16 @@ if (!$p) {
         required
     >
 
-    <button type="submit">Salvar</button>
+    <button type="submit">
+        <i class="fa-solid fa-floppy-disk"></i>
+        Salvar
+    </button>
 
 </form>
 
 <a href="protocolos.php">Voltar</a>
+
+</main>
+
+</body>
+</html>

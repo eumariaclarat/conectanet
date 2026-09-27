@@ -1,18 +1,14 @@
 <?php
-session_start();
+require "verifica_login.php";
 
-if (!isset($_SESSION["id_cliente"])) {
-    header("Location: home.php");
+if ($tipo !== "cliente") {
+    header("Location: historico.php");
     exit;
 }
 
-include "conexao.php";
-
-$id = $_SESSION["id_cliente"];
-$nome = $_SESSION["nome"];
 $sql = "SELECT chamado.*
         FROM chamado
-        INNER JOIN abre 
+        INNER JOIN abre
             ON chamado.id_chamado = abre.id_chamado
         WHERE abre.id_cliente = ?
         ORDER BY chamado.id_chamado DESC";
@@ -21,6 +17,7 @@ $stmt = $conexao->prepare($sql);
 $stmt->bind_param("i", $id);
 $stmt->execute();
 $protocolos = $stmt->get_result();
+
 
 $sql = "SELECT agendamento.id_agendamento
         FROM agendamento
@@ -35,6 +32,7 @@ $stmt->bind_param("i", $id);
 $stmt->execute();
 $agendamento = $stmt->get_result();
 
+
 $sql = "SELECT chamado.id_chamado
         FROM chamado
         INNER JOIN abre
@@ -47,17 +45,20 @@ $stmt->bind_param("i", $id);
 $stmt->execute();
 $atendimentos = $stmt->get_result();
 
-require_once "conexao.php";
+$pagina_atual = "painel";
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ConectaNet | Central de Atendimento</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
 
@@ -67,8 +68,6 @@ require_once "conexao.php";
     <h1>
         Olá, <?php echo htmlspecialchars($nome); ?>!
     </h1>
-
-    <!-- Início Cards-->
     <div class="cards">
         <div class="card">
             <h3>Protocolos abertos</h3>
@@ -89,7 +88,6 @@ require_once "conexao.php";
             </h2>
         </div>
     </div>
-    <!-- Fim Cards-->
 
     <h3>Últimos Protocolos</h3>
     <table>
@@ -112,7 +110,6 @@ require_once "conexao.php";
             </tr>
         <?php } ?>
     </table>
-
 </main>
 
 </body>

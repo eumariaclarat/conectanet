@@ -1,74 +1,119 @@
 <?php
-
 session_start();
-
 include "conexao.php";
+
+$erro = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $email = $_POST["email"];
-    $senha = $_POST["senha"];
+    $email = trim($_POST["email"] ?? "");
+    $senha = $_POST["senha"] ?? "";
 
-    $sql = "SELECT * FROM cliente WHERE email = ?";
+    if (empty($email) || empty($senha)) {
 
-    $stmt = $conexao->prepare($sql);
-    $stmt->bind_param("s", $email);
-    $stmt->execute();
-
-    $resultado = $stmt->get_result();
-
-    if ($resultado->num_rows == 1) {
-
-        $cliente = $resultado->fetch_assoc();
-
-        if (password_verify($senha, $cliente["senha"])) {
-
-            $_SESSION["id_cliente"] = $cliente["id_cliente"];
-            $_SESSION["nome"] = $cliente["nome"];
-            $_SESSION["email"] = $cliente["email"];
-
-            header("Location: index.php");
-            exit;
-
-        } else {
-            $erro = "Senha incorreta.";
-        }
+        $erro = "Preencha todos os campos.";
 
     } else {
-        $erro = "E-mail não encontrado.";
+
+        // Procura primeiro entre os clientes
+        $sql = "SELECT * FROM cliente WHERE email = ?";
+
+        $stmt = $conexao->prepare($sql);
+        $stmt->bind_param("s", $email);
+        $stmt->execute();
+
+        $resultado = $stmt->get_result();
+
+        if ($resultado->num_rows == 1) {
+
+            $cliente = $resultado->fetch_assoc();
+
+            if (password_verify($senha, $cliente["senha"])) {
+
+                session_regenerate_id(true);
+
+                $_SESSION["tipo"] = "cliente";
+                $_SESSION["id_cliente"] = $cliente["id_cliente"];
+                $_SESSION["nome"] = $cliente["nome"];
+                $_SESSION["email"] = $cliente["email"];
+
+                header("Location: perfil.php");
+                exit;
+
+            } else {
+                $erro = "Senha incorreta.";
+            }
+
+        } else {
+
+            // Se não encontrou como cliente, procura como funcionário
+            $sql = "SELECT * FROM funcionario WHERE email = ?";
+
+            $stmt = $conexao->prepare($sql);
+            $stmt->bind_param("s", $email);
+            $stmt->execute();
+
+            $resultado = $stmt->get_result();
+
+            if ($resultado->num_rows == 1) {
+
+                $funcionario = $resultado->fetch_assoc();
+
+                if (password_verify($senha, $funcionario["senha"])) {
+
+                    session_regenerate_id(true);
+
+                    $_SESSION["tipo"] = "funcionario";
+                    $_SESSION["id_funcionario"] = $funcionario["id_funcionario"];
+                    $_SESSION["nome"] = $funcionario["nome"];
+                    $_SESSION["email"] = $funcionario["email"];
+
+                    header("Location: perfil.php");
+                    exit;
+
+                } else {
+                    $erro = "Senha incorreta.";
+                }
+
+            } else {
+                $erro = "E-mail não encontrado.";
+            }
+        }
     }
 }
+
+$mensagem = $_SESSION["mensagem"] ?? "";
+unset($_SESSION["mensagem"]);
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>Meu Perfil | ConectaNet</title>
-
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Entrar | ConectaNet</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 <body>
 
 <div class="login">
 
-    <div class="logo">
-        CN
-    </div>
+    <div class="logo">CN</div>
 
     <h1>ConectaNet</h1>
+    <h2>Acesse sua conta</h2>
+    <p class="bem-vindo">Informe seus dados para continuar</p>
 
-    <h2>Central de Atendimento</h2>
+    <?php if ($erro) { ?>
+        <div class="erro"><?= htmlspecialchars($erro) ?></div>
+    <?php } ?>
 
-    <p class="bem-vindo">
-        Entre para acessar sua conta.
-    </p>
-
-    <?php if (isset($erro)) { ?>
-        <div class="erro">
-            <?php echo $erro; ?>
+    <?php if ($mensagem) { ?>
+        <div class="erro" style="background:#e9f9ef;color:#1c8a4f;border-color:#bdeccd;">
+            <?= htmlspecialchars($mensagem) ?>
         </div>
     <?php } ?>
 
@@ -78,11 +123,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             type="email"
             name="email"
             placeholder="E-mail"
+            value="<?= htmlspecialchars($_POST["email"] ?? "") ?>"
             required
         >
 
         <div class="senha-container">
-
             <input
                 type="password"
                 name="senha"
@@ -90,67 +135,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 placeholder="Senha"
                 required
             >
-<label>Tipo de usuário</label>
-            <select name="tipo" required>
-                <option value="">
-                    Selecione o tipo 
-                </option>
-                <option value="funcionario">
-                    Funcionário
-                </option>
-                <option value="usuario">
-                    Cliente
-                </option>
-            </select>
-            <button
-                type="button"
-                class="mostrar"
-                onclick="mostrarSenha()"
-            >
-                Mostrar
-            </button>
-
+            <button type="button" class="mostrar" onclick="mostrarSenha()">Mostrar</button>
         </div>
 
-        <button type="submit" class="entrar">
-            Entrar
-        </button>
+        <button type="submit" class="entrar">Entrar</button>
 
     </form>
+
     <p class="cadastro">
-        Ainda não possui uma conta?
-        <a href="cadastro.php">Criar conta</a>
+        Ainda não tem conta? <a href="cadastro.php">Cadastre-se</a>
     </p>
-
-    <div class="status">
-        Sistema online
-    </div>
-
-    <footer>
-        © 2026 ConectaNet - Christian
-    </footer>
 
 </div>
 
 <script>
-
 function mostrarSenha() {
-
-    let senha = document.getElementById("senha");
-    let botao = document.querySelector(".mostrar");
-
-    if (senha.type === "password") {
-        senha.type = "text";
-        botao.innerText = "Ocultar";
+    const campo = document.getElementById("senha");
+    const botao = document.querySelector(".mostrar");
+    if (campo.type === "password") {
+        campo.type = "text";
+        botao.textContent = "Ocultar";
     } else {
-        senha.type = "password";
-        botao.innerText = "Mostrar";
+        campo.type = "password";
+        botao.textContent = "Mostrar";
     }
-
 }
-
 </script>
 
 </body>
-
 </html>
