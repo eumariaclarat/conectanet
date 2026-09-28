@@ -23,6 +23,9 @@ $pagina_atual = $pagina_atual ?? "";
     <a href="protocolos.php" class="<?= $pagina_atual === 'protocolos' ? 'ativo' : '' ?>">
         <i class="fa-solid fa-file-lines"></i> Protocolos
     </a>
+    <a href="agendamentoC.php" class="<?= $pagina_atual === 'agendamento' ? 'ativo' : '' ?>">
+        <i class="fa-regular fa-calendar"></i> Agendamentos
+    </a>
 
 <?php } else if ($tipo === "funcionario") { ?>
 
@@ -30,7 +33,7 @@ $pagina_atual = $pagina_atual ?? "";
         <i class="fa-regular fa-address-card"></i> Perfil
     </a>
 
-    <a href="agendamento.php" class="<?= $pagina_atual === 'agendamento' ? 'ativo' : '' ?>">
+    <a href="agendamentoF.php" class="<?= $pagina_atual === 'agendamento' ? 'ativo' : '' ?>">
         <i class="fa-regular fa-calendar"></i> Agendamentos
     </a>
 
