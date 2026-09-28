@@ -97,43 +97,19 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 <select name="descricao" id="descricao" onchange="outroCampo()" required>
     <option value="" disabled selected>
-        Escolha o problema
+        Selecione o problema
     </option>
 
-    <option value="Internet sem conexão">
-        Internet sem conexão
+    <option value="Problema com Internet">
+        Problema com Internet 
     </option>
 
-    <option value="Internet lenta ou instável">
-        Internet lenta ou instável
+    <option value="Computador não liga">
+        Computador não liga
     </option>
 
-    <option value="Problema no Wi-Fi">
-        Problema no Wi-Fi
-    </option>
-
-    <option value="Problema na linha telefônica">
-        Problema na linha telefônica
-    </option>
-
-    <option value="Problema no sinal de TV">
-        Problema no sinal de TV
-    </option>
-
-    <option value="Dúvidas sobre fatura ou cobrança">
-        Dúvidas sobre fatura ou cobrança
-    </option>
-
-    <option value="Equipamento com defeito">
-        Equipamento com defeito
-    </option>
-
-    <option value="Solicitação de visita técnica">
-        Solicitação de visita técnica
-    </option>
-
-    <option value="Problema no aplicativo">
-        Problema no aplicativo
+    <option value="Solicitação de manutenção">
+        Solicitação de manutenção
     </option>
 
     <option value="Outro">
