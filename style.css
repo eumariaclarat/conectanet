@@ -4,16 +4,10 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
-
 body {
     background: #f5f7fb;
     color: #202b35;
 }
-
-/* =========================
-   CABEÇALHO
-========================= */
-
 header {
     height: 60px;
     background: #3157d5;
@@ -29,11 +23,6 @@ header {
     right: 0;
     z-index: 1000;
 }
-
-/* =========================
-   MENU
-========================= */
-
 nav {
     position: fixed;
     top: 60px;
@@ -44,7 +33,6 @@ nav {
     padding-top: 15px;
     z-index: 999;
 }
-
 nav a {
     display: flex;
     align-items: center;
@@ -53,53 +41,37 @@ nav a {
     text-decoration: none;
     transition: 0.25s;
 }
-
 nav a:hover {
     background: #3157d5;
     padding-left: 25px;
 }
-
 nav a.ativo {
     background: #3157d5;
     border-left: 4px solid white;
     padding-left: 16px;
 }
-
 nav i {
     width: 25px;
     margin-right: 8px;
 }
-
-/* =========================
-   CONTEÚDO
-========================= */
-
 main {
     margin-left: 210px;
     padding: 90px 30px 30px;
 }
-
 h1 {
     margin-bottom: 25px;
     color: #202b35;
 }
-
 h2,
 h3 {
     margin-bottom: 10px;
 }
-
-/* =========================
-   CARDS
-========================= */
-
 .cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
     margin-bottom: 30px;
 }
-
 .card {
     background: white;
     padding: 20px;
@@ -107,33 +79,24 @@ h3 {
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
     transition: 0.25s;
 }
-
 .card:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
-
 .card h3 {
     color: #555;
     font-size: 16px;
 }
-
 .card h2 {
     color: #3157d5;
     font-size: 25px;
 }
-
-/* =========================
-   FORMULÁRIOS
-========================= */
-
 form {
     display: flex;
     gap: 10px;
     margin-bottom: 25px;
     flex-wrap: wrap;
 }
-
 select,
 input {
     padding: 12px;
@@ -143,25 +106,17 @@ input {
     outline: none;
     transition: 0.2s;
 }
-
 select {
     width: 300px;
 }
-
 input {
     width: 300px;
 }
-
 select:focus,
 input:focus {
     border-color: #3157d5;
     box-shadow: 0 0 0 3px rgba(49, 87, 213, 0.1);
 }
-
-/* =========================
-   BOTÕES
-========================= */
-
 button {
     background: #3157d5;
     color: white;
@@ -172,16 +127,10 @@ button {
     font-weight: bold;
     transition: 0.25s;
 }
-
 button:hover {
     background: #2546b5;
     transform: translateY(-1px);
 }
-
-/* =========================
-   TABELAS
-========================= */
-
 table {
     width: 100%;
     background: white;
@@ -190,37 +139,27 @@ table {
     overflow: hidden;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
 }
-
 th {
     background: #202b35;
     color: white;
     padding: 14px;
     text-align: left;
 }
-
 td {
     padding: 13px;
     border-bottom: 1px solid #eee;
 }
-
 tr:hover {
     background: #f5f7fb;
 }
-
 td a {
     color: #3157d5;
     text-decoration: none;
     font-weight: bold;
 }
-
 td a:hover {
     text-decoration: underline;
 }
-
-/* =========================
-   LOGIN
-========================= */
-
 .login {
     width: 420px;
     max-width: 90%;
@@ -231,9 +170,6 @@ td a:hover {
     margin: 80px auto;
     text-align: center;
 }
-
-/* Logo CN */
-
 .login .logo {
     width: 65px;
     height: 65px;
@@ -247,46 +183,35 @@ td a:hover {
     font-size: 20px;
     font-weight: bold;
 }
-
 .login h1 {
     color: #3157d5;
     margin-bottom: 5px;
     font-size: 28px;
 }
-
 .login h2 {
     color: #202b35;
     margin-bottom: 10px;
     font-size: 18px;
 }
-
 .login .bem-vindo {
     color: #777;
     font-size: 14px;
     margin-bottom: 25px;
 }
-
-/* Formulário */
-
 .login form {
     display: flex;
     flex-direction: column;
     gap: 13px;
 }
-
 .login input {
     width: 100%;
     height: 45px;
     padding: 0 14px;
     font-size: 14px;
 }
-
-/* Tipo de usuário */
-
 .campo-tipo {
     text-align: left;
 }
-
 .campo-tipo label {
     display: block;
     font-size: 12px;
@@ -294,11 +219,9 @@ td a:hover {
     color: #777;
     margin-bottom: 6px;
 }
-
 .select-tipo {
     position: relative;
 }
-
 .select-tipo i {
     position: absolute;
     left: 14px;
@@ -308,7 +231,6 @@ td a:hover {
     font-size: 14px;
     pointer-events: none;
 }
-
 .select-tipo select {
     width: 100%;
     height: 45px;
@@ -325,12 +247,10 @@ td a:hover {
     -moz-appearance: none;
     transition: 0.2s;
 }
-
 .select-tipo select:focus {
     border-color: #3157d5;
     box-shadow: 0 0 0 3px rgba(49, 87, 213, 0.1);
 }
-
 .select-tipo::after {
     content: "";
     position: absolute;
@@ -344,18 +264,13 @@ td a:hover {
     transform: translateY(-50%);
     pointer-events: none;
 }
-
-/* Senha */
-
 .senha-container {
     position: relative;
     width: 100%;
 }
-
 .senha-container input {
     padding-right: 75px;
 }
-
 .mostrar {
     position: absolute;
     right: 10px;
@@ -367,23 +282,16 @@ td a:hover {
     color: #3157d5 !important;
     font-size: 12px;
 }
-
 .mostrar:hover {
     background: transparent !important;
     transform: translateY(-50%);
 }
-
-/* Botão entrar */
-
 .login .entrar {
     width: 100%;
     height: 45px;
     font-size: 15px;
     margin-top: 5px;
 }
-
-/* Erro */
-
 .erro {
     background: #fff0f0;
     color: #c0392b;
@@ -393,43 +301,29 @@ td a:hover {
     margin-bottom: 15px;
     font-size: 14px;
 }
-
-/* Cadastro */
-
 .login .cadastro {
     margin-top: 20px;
     color: #666;
     font-size: 14px;
 }
-
 .login a {
     color: #3157d5;
     font-weight: bold;
     text-decoration: none;
 }
-
 .login a:hover {
     text-decoration: underline;
 }
-
-/* Status */
-
 .status {
     margin-top: 22px;
     font-size: 13px;
     color: #555;
 }
-
 footer {
     margin-top: 25px;
     font-size: 12px;
     color: #999;
 }
-
-/* =========================
-   PERFIL
-========================= */
-
 .perfil {
     background: white;
     padding: 25px;
@@ -437,20 +331,16 @@ footer {
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
     max-width: 600px;
 }
-
 .perfil p {
     margin-bottom: 15px;
     font-size: 16px;
 }
-
 .perfil strong {
     color: #3157d5;
 }
-
 .acoes {
     margin-top: 20px;
 }
-
 .acoes a {
     display: inline-block;
     background: #3157d5;
@@ -461,65 +351,43 @@ footer {
     margin-right: 8px;
     transition: 0.2s;
 }
-
 .acoes a:hover {
     background: #2546b5;
 }
-
-/* =========================
-   RESPONSIVO
-========================= */
-
 @media (max-width: 900px) {
-
     .cards {
         grid-template-columns: repeat(2, 1fr);
     }
 
 }
-
 @media (max-width: 600px) {
-
     nav {
         width: 170px;
     }
-
     main {
         margin-left: 170px;
         padding: 80px 15px 20px;
     }
-
     .cards {
         grid-template-columns: 1fr;
     }
-
     select,
     input {
         width: 100%;
     }
-
     table {
         font-size: 13px;
     }
-
     th,
     td {
         padding: 8px;
     }
-
     .login {
         margin: 50px auto;
         padding: 30px 20px;
     }
 
 }
-
-/* ==========================================================================
-   PÁGINA INICIAL (home.php)
-   Tudo aqui vive dentro de .pagina-inicial para não interferir no
-   layout do painel/login, que usam header, nav, footer etc. diferentes.
-========================================================================== */
-
 .pagina-inicial{
     --azul: #3157d5;
     --azul-escuro: #1f3fae;
@@ -530,23 +398,19 @@ footer {
     background: #ffffff;
     color: var(--texto);
 }
-
 .pagina-inicial a{
     text-decoration: none;
     color: inherit;
 }
-
 .pagina-inicial img{
     max-width: 100%;
     display: block;
 }
-
 .pagina-inicial .container{
     max-width: 1180px;
     margin: 0 auto;
     padding: 0 25px;
 }
-
 .pagina-inicial .btn{
     display: inline-flex;
     align-items: center;
@@ -558,18 +422,13 @@ footer {
     border: none;
     cursor: pointer;
 }
-
 .pagina-inicial .btn-azul{
     background: var(--azul);
     color: white;
 }
-
 .pagina-inicial .btn-azul:hover{
     background: var(--azul-escuro);
 }
-
-/* Marca (usada no rodapé) */
-
 .pagina-inicial .marca{
     font-size: 22px;
     font-weight: bold;
@@ -578,17 +437,12 @@ footer {
     align-items: center;
     gap: 8px;
 }
-
-/* Hero */
-
 .pagina-inicial .hero{
     position: relative;
     background: linear-gradient(180deg, var(--azul-claro) 0%, #ffffff 75%);
     padding: 70px 0 90px;
     overflow: hidden;
 }
-
-/* Manchas decorativas grandes no fundo do hero */
 .pagina-inicial .hero::before,
 .pagina-inicial .hero::after{
     content: "";
@@ -597,14 +451,12 @@ footer {
     background: radial-gradient(circle, rgba(49,87,213,.16) 0%, rgba(49,87,213,0) 70%);
     z-index: 0;
 }
-
 .pagina-inicial .hero::before{
     width: 620px;
     height: 620px;
     top: -260px;
     right: -160px;
 }
-
 .pagina-inicial .hero::after{
     width: 380px;
     height: 380px;
@@ -612,7 +464,6 @@ footer {
     left: -120px;
     background: radial-gradient(circle, rgba(49,87,213,.10) 0%, rgba(49,87,213,0) 70%);
 }
-
 .pagina-inicial .hero .container{
     position: relative;
     z-index: 1;
@@ -621,25 +472,21 @@ footer {
     gap: 50px;
     align-items: center;
 }
-
 .pagina-inicial .hero-tag{
     color: var(--azul);
     font-weight: bold;
     font-size: 14px;
     margin-bottom: 14px;
 }
-
 .pagina-inicial .hero h1{
     font-size: 42px;
     line-height: 1.2;
     color: var(--texto);
     margin-bottom: 20px;
 }
-
 .pagina-inicial .hero h1 span{
     color: var(--azul);
 }
-
 .pagina-inicial .hero p{
     color: var(--texto-suave);
     font-size: 16px;
@@ -647,19 +494,15 @@ footer {
     max-width: 480px;
     margin-bottom: 28px;
 }
-
 .pagina-inicial .hero-rodape{
     margin-top: 18px;
     font-size: 13px;
     color: var(--texto-suave);
 }
-
 .pagina-inicial .mockup-wrap{
     position: relative;
     isolation: isolate;
 }
-
-/* Bolhas azuis atrás do mockup */
 .pagina-inicial .mockup-wrap::before,
 .pagina-inicial .mockup-wrap::after{
     content: "";
@@ -667,7 +510,6 @@ footer {
     border-radius: 50%;
     z-index: -1;
 }
-
 .pagina-inicial .mockup-wrap::before{
     width: 340px;
     height: 340px;
@@ -675,7 +517,6 @@ footer {
     right: -70px;
     background: radial-gradient(circle, rgba(49,87,213,.22) 0%, rgba(49,87,213,0) 72%);
 }
-
 .pagina-inicial .mockup-wrap::after{
     width: 240px;
     height: 240px;
@@ -683,8 +524,6 @@ footer {
     left: -60px;
     background: radial-gradient(circle, rgba(49,87,213,.16) 0%, rgba(49,87,213,0) 72%);
 }
-
-/* Pontilhado decorativo no canto inferior direito */
 .pagina-inicial .mockup-dots{
     position: absolute;
     right: -18px;
@@ -696,7 +535,6 @@ footer {
     opacity: .35;
     z-index: -1;
 }
-
 .pagina-inicial .mockup{
     position: relative;
     background: white;
@@ -705,7 +543,6 @@ footer {
     overflow: hidden;
     border: 1px solid var(--borda);
 }
-
 .pagina-inicial .mockup-topo{
     background: var(--azul);
     color: white;
@@ -716,17 +553,14 @@ footer {
     align-items: center;
     gap: 8px;
 }
-
 .pagina-inicial .mockup-corpo{
     padding: 18px;
 }
-
 .pagina-inicial .mockup-corpo h4{
     font-size: 13px;
     color: var(--texto-suave);
     margin-bottom: 12px;
 }
-
 .pagina-inicial .chamado-linha{
     display: flex;
     align-items: center;
@@ -737,18 +571,15 @@ footer {
     margin-bottom: 10px;
     font-size: 13px;
 }
-
 .pagina-inicial .badge{
     font-size: 11px;
     font-weight: bold;
     padding: 4px 10px;
     border-radius: 20px;
 }
-
 .pagina-inicial .badge.andamento{ background:#fff2d9; color:#a86500; }
 .pagina-inicial .badge.resolvido{ background:#d9f4e3; color:#1c8a4f; }
 .pagina-inicial .badge.aberto{ background:#e4e9ff; color:#3157d5; }
-
 .pagina-inicial .balao{
     position: absolute;
     background: white;
@@ -761,69 +592,53 @@ footer {
     gap: 10px;
     align-items: flex-start;
 }
-
 .pagina-inicial .balao i{
     color: var(--azul);
     font-size: 16px;
     margin-top: 2px;
 }
-
 .pagina-inicial .balao strong{
     display: block;
     font-size: 13px;
     margin-bottom: 2px;
 }
-
 .pagina-inicial .balao{ z-index: 2; }
 .pagina-inicial .balao.b1{ top: -18px; right: -20px; }
 .pagina-inicial .balao.b2{ bottom: -18px; right: -20px; top: auto; }
-
-/* Seções gerais */
-
 .pagina-inicial .secao{
     padding: 80px 0;
 }
-
 .pagina-inicial .secao.cinza{
     background: var(--azul-claro);
 }
-
 .pagina-inicial .titulo-secao{
     text-align: center;
     margin-bottom: 45px;
 }
-
 .pagina-inicial .titulo-secao .eyebrow{
     color: var(--azul);
     font-weight: bold;
     font-size: 13px;
     margin-bottom: 8px;
 }
-
 .pagina-inicial .titulo-secao h2{
     font-size: 30px;
 }
-
 .pagina-inicial .titulo-secao p{
     color: var(--texto-suave);
     margin-top: 8px;
 }
-
-/* Contato */
-
 .pagina-inicial .contato-grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
     align-items: start;
 }
-
 .pagina-inicial .contato-item{
     display: flex;
     gap: 14px;
     margin-bottom: 22px;
 }
-
 .pagina-inicial .contato-item i{
     width: 38px;
     height: 38px;
@@ -835,24 +650,20 @@ footer {
     align-items: center;
     justify-content: center;
 }
-
 .pagina-inicial .contato-item strong{
     display: block;
     margin-bottom: 4px;
 }
-
 .pagina-inicial .contato-item span{
     color: var(--texto-suave);
     font-size: 14px;
 }
-
 .pagina-inicial .form-contato{
     background: white;
     border-radius: 14px;
     padding: 30px;
     box-shadow: 0 15px 40px rgba(49,87,213,.1);
 }
-
 .pagina-inicial .form-contato label{
     display: block;
     font-size: 12px;
@@ -860,11 +671,9 @@ footer {
     color: var(--texto-suave);
     margin: 14px 0 6px;
 }
-
 .pagina-inicial .form-contato label:first-child{
     margin-top: 0;
 }
-
 .pagina-inicial .form-contato input,
 .pagina-inicial .form-contato textarea{
     width: 100%;
@@ -873,51 +682,41 @@ footer {
     border-radius: 8px;
     font-size: 14px;
 }
-
 .pagina-inicial .form-contato textarea{
     resize: vertical;
     min-height: 90px;
 }
-
 .pagina-inicial .form-contato .btn{
     margin-top: 20px;
     width: 100%;
     justify-content: center;
 }
-
-/* Depoimentos */
-
 .pagina-inicial .depoimentos-grid{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
 }
-
 .pagina-inicial .depoimento{
     background: var(--azul-claro);
     border-radius: 14px;
     padding: 28px;
 }
-
 .pagina-inicial .depoimento i.aspas{
     color: var(--azul);
     font-size: 22px;
     margin-bottom: 12px;
 }
-
 .pagina-inicial .depoimento p{
     color: var(--texto);
     font-size: 14px;
     line-height: 1.6;
     margin-bottom: 20px;
 }
-
 .pagina-inicial .autor{
     display: flex;
     align-items: center;
     gap: 12px;
 }
-
 .pagina-inicial .autor .avatar{
     width: 38px;
     height: 38px;
@@ -930,7 +729,6 @@ footer {
     font-weight: bold;
     font-size: 14px;
 }
-
 .pagina-inicial .autor strong{
     display: block;
     font-size: 13px;
@@ -940,15 +738,11 @@ footer {
     font-size: 12px;
     color: var(--texto-suave);
 }
-
-/* Rodapé */
-
 .pagina-inicial footer.principal{
     background: #14204d;
     color: #c7cff2;
     padding: 55px 0 25px;
 }
-
 .pagina-inicial .rodape-grid{
     display: grid;
     grid-template-columns: 1.6fr 1fr 1fr 1fr;
@@ -956,24 +750,20 @@ footer {
     padding-bottom: 35px;
     border-bottom: 1px solid rgba(255,255,255,.12);
 }
-
 .pagina-inicial .rodape-grid .marca{
     color: white;
     margin-bottom: 10px;
 }
-
 .pagina-inicial .rodape-grid p{
     font-size: 13px;
     line-height: 1.6;
     max-width: 260px;
 }
-
 .pagina-inicial .rodape-grid h4{
     color: white;
     font-size: 14px;
     margin-bottom: 16px;
 }
-
 .pagina-inicial .rodape-grid a,
 .pagina-inicial .rodape-grid li{
     display: block;
@@ -981,20 +771,15 @@ footer {
     margin-bottom: 10px;
     list-style: none;
 }
-
 .pagina-inicial .rodape-grid a:hover{
     color: white;
 }
-
 .pagina-inicial .rodape-baixo{
     display: flex;
     justify-content: space-between;
     padding-top: 20px;
     font-size: 12px;
 }
-
-/* Responsivo */
-
 @media (max-width: 860px){
     .pagina-inicial .hero .container{ grid-template-columns: 1fr; }
     .pagina-inicial .hero{ padding-top: 40px; }
@@ -1004,78 +789,54 @@ footer {
     .pagina-inicial .depoimentos-grid{ grid-template-columns: 1fr; }
     .pagina-inicial .rodape-grid{ grid-template-columns: 1fr 1fr; }
 }
-
-/* CABEÇALHO DA PÁGINA INICIAL
-   Grid de 3 colunas (esquerda / centro / direita) para que a logo
-   fique realmente centralizada e os botões fiquem à direita, sem
-   usar position:absolute (que quebrava o alinhamento vertical). */
-
 .pagina-inicial main {
     margin-left: 0;
 }
-
 .pagina-inicial .topo {
     position: sticky;
     top: 0;
     z-index: 100;
-
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
-
     width: 100%;
     height: 84px;
     padding: 0 40px;
-
     background: #ffffff;
     border-bottom: 1px solid var(--borda);
     box-sizing: border-box;
 }
-
-/* LOGO NO LADO ESQUERDO */
-
 .pagina-inicial .logo {
     grid-column: 1;
     justify-self: start;
-
     display: flex;
     align-items: center;
     gap: 8px;
-
     color: var(--azul);
     font-size: 20px;
     font-weight: 700;
     text-decoration: none;
     white-space: nowrap;
 }
-
-/* BOTÕES À DIREITA */
-
 .pagina-inicial .botoes-topo {
     grid-column: 3;
     justify-self: end;
-
     display: flex;
     align-items: center;
     gap: 12px;
 }
-
 .pagina-inicial .btn-entrar,
 .pagina-inicial .btn-criar {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
     padding: 11px 20px;
     border-radius: 8px;
-
     background: var(--azul);
     color: white;
-
     font-size: 13px;
     font-weight: 700;
     text-decoration: none;
-
     transition: 0.3s;
 }
 
@@ -1084,9 +845,6 @@ footer {
     background: var(--azul-escuro);
     transform: translateY(-2px);
 }
-
-/* CELULAR */
-
 @media (max-width: 600px) {
     .pagina-inicial .topo {
         grid-template-columns: 1fr;
@@ -1114,12 +872,9 @@ footer {
         font-size: 12px;
     }
 }
-/* ÍCONES SOCIAIS DO RODAPÉ */
-
 .pagina-inicial .footer-col{
     text-align: center;
 }
-
 .pagina-inicial .rodape-grid .social-icons {
     display: flex;
     flex-direction: row;
@@ -1128,8 +883,6 @@ footer {
     gap: 15px;
     margin-top: 18px;
 }
-
-/* Círculos dos ícones (especificidade maior que ".rodape-grid a" para não ser sobrescrita) */
 .pagina-inicial .rodape-grid .social-icons a {
     width: 44px;
     height: 44px;
@@ -1148,8 +901,6 @@ footer {
 
     transition: 0.3s ease;
 }
-
-/* Efeito ao passar o mouse */
 .pagina-inicial .rodape-grid .social-icons a:hover {
     background: #3157d5;
     color: #ffffff;
