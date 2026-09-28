@@ -116,8 +116,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
                     <i class="fa-solid fa-location-dot"></i>
                     <div>
                         <strong>Endereço</strong>
-                        <span>Av. Senador Salgado Filho, 3.100, Lj. 4 e 5<br>
-                        Bairro Uberaba - Curitiba - PR</span>
+                        <span>Senai - SC<br>
+                        Rio do sul - SC</span>
                     </div>
                 </div>
 
@@ -189,7 +189,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
                 <div class="autor">
                     <div class="avatar">JS</div>
                     <div>
-                        <strong>Juliana Santos</strong>
+                        <strong>Daniel Baumann</strong>
                         <span>RH - Empresa Alpha</span>
                     </div>
                 </div>
