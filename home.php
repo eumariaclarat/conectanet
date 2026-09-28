@@ -107,7 +107,7 @@ if (isset($_SESSION["tipo"])) {
                 <div class="contato-item">
                     <i class="fa-solid fa-location-dot"></i>
                     <div>
-                        <strong>Endereço</strong>
+                        <strong> Rodovia BR-470, Km 137, 2555 - Bairro Navegantes, Rio do Sul - SC, CEP 89162-528</strong>
                         <span>Senai - SC<br>
                         Rio do sul - SC</span>
                     </div>
