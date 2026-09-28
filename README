@@ -1,0 +1,59 @@
+# ConectaNet — Sistema de Gestão de Chamados
+
+## 1. Sobre o projeto
+
+O ConectaNet é um sistema web desenvolvido para facilitar o gerenciamento de chamados técnicos, agendamentos de visitas e atendimentos de clientes.
+
+O sistema permite que clientes realizem seu cadastro, efetuem login, abram chamados e solicitem visitas técnicas. Os funcionários podem visualizar os chamados e acompanhar os agendamentos realizados pelos clientes.
+
+O projeto foi desenvolvido como atividade acadêmica do curso Técnico em Informática para Internet, com o objetivo de aplicar conhecimentos de desenvolvimento web e banco de dados.
+
+## 2. Funcionalidades
+
+### Clientes
+- Cadastro e login no sistema.
+- Abertura e acompanhamento de chamados.
+- Solicitação de visitas técnicas.
+- Visualização dos próprios agendamentos.
+
+### Funcionários
+- Visualização dos chamados dos clientes.
+- Consulta de visitas técnicas agendadas.
+- Acompanhamento dos atendimentos.
+
+## 3. Tecnologias utilizadas
+
+- **HTML5:** estrutura das páginas.
+- **CSS3:** estilização e layout do sistema.
+- **PHP:** processamento das informações, autenticação e comunicação com o banco de dados.
+- **MySQL/MariaDB:** armazenamento dos dados de clientes, funcionários, chamados e agendamentos.
+- **JavaScript:** recursos de interação, quando utilizados.
+- **Font Awesome:** ícones da interface.
+- **XAMPP:** ambiente de desenvolvimento local, com Apache e MySQL/MariaDB.
+
+## 4. Como executar o projeto
+
+1. Instale o XAMPP no computador.
+2. Copie a pasta do projeto para o diretório `C:\xampp\htdocs\`.
+3. Abra o painel do XAMPP e inicie os serviços **Apache** e **MySQL**.
+4. Acesse o phpMyAdmin pelo endereço `http://localhost/phpmyadmin`.
+5. Crie o banco de dados `conectanet` e importe ou execute o arquivo SQL do projeto para criar as tabelas necessárias.
+6. Verifique as configurações de conexão com o banco no arquivo `conexao.php`.
+7. Abra o navegador e acesse `http://localhost/conectanet/home.php`.
+
+> Se a pasta do projeto tiver outro nome, substitua `conectanet` na URL pelo nome utilizado dentro de `htdocs`.
+
+## 5. Banco de dados
+
+O sistema utiliza o banco de dados `conectanet`, que armazena as informações necessárias para o funcionamento da aplicação.
+
+Principais tabelas:
+- `cliente`: dados e informações de acesso dos clientes.
+- `funcionario`: dados dos funcionários.
+- `chamado`: informações e status dos chamados técnicos.
+- `agendamento`: datas, horários e informações das visitas técnicas.
+- `abre` e `gera`: relacionam os clientes aos chamados e os chamados aos agendamentos.
+
+## 6. Considerações finais
+
+O ConectaNet busca organizar o atendimento técnico e facilitar a comunicação entre clientes e funcionários. O desenvolvimento do projeto permite aplicar conhecimentos de programação web, integração com banco de dados, autenticação de usuários e desenvolvimento de sistemas dinâmicos.
