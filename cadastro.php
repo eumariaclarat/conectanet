@@ -11,12 +11,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = trim($_POST["email"] ?? "");
     $senhaDigitada = $_POST["senha"] ?? "";
 
-    // Campos exclusivos de cliente
     $cpf = trim($_POST["cpf"] ?? "");
     $telefone = trim($_POST["telefone"] ?? "");
     $endereco = trim($_POST["endereco"] ?? "");
 
-    // Campo exclusivo de funcionário
     $cargo = trim($_POST["cargo"] ?? "");
 
     if ($tipo !== "cliente" && $tipo !== "funcionario") {
@@ -131,48 +129,36 @@ $tipo_selecionado = $_POST["tipo"] ?? "cliente";
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cadastro | ConectaNet</title>
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | ConectaNet</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-
 <body>
+    <div class="login">
+        <div class="logo">CN</div>
+        <h1>ConectaNet</h1>
+        <h2>Criar conta</h2>
+        <p class="bem-vindo">Preencha os dados para se cadastrar</p>
 
-<div class="login">
-
-    <div class="logo">CN</div>
-
-    <h1>ConectaNet</h1>
-    <h2>Criar conta</h2>
-    <p class="bem-vindo">Preencha os dados para se cadastrar</p>
-
-    <?php if ($erro) { ?>
-        <div class="erro"><?= htmlspecialchars($erro) ?></div>
-    <?php } ?>
-
-    <form method="POST" id="form-cadastro">
-
-        <div class="campo-tipo">
-            <label>Tipo de usuário</label>
-            <div class="select-tipo">
-                <i class="fa-solid fa-user"></i>
-                <select name="tipo" id="tipo" onchange="alternarCampos()" required>
-                    <option value="cliente" <?= $tipo_selecionado === "cliente" ? "selected" : "" ?>>Cliente</option>
-                    <option value="funcionario" <?= $tipo_selecionado === "funcionario" ? "selected" : "" ?>>Funcionário</option>
-                </select>
+        <?php if ($erro) { ?>
+            <div class="erro"><?= htmlspecialchars($erro) ?></div>
+        <?php } ?>
+        
+        <form method="POST" id="form-cadastro">
+            <div class="campo-tipo">
+                <label>Tipo de usuário</label>
+                <div class="select-tipo">
+                    <i class="fa-solid fa-user"></i>
+                    <select name="tipo" id="tipo" onchange="alternarCampos()" required>
+                        <option value="cliente" <?= $tipo_selecionado === "cliente" ? "selected" : "" ?>>Cliente</option>
+                        <option value="funcionario" <?= $tipo_selecionado === "funcionario" ? "selected" : "" ?>>Funcionário</option>
+                    </select>
+                </div>
             </div>
-        </div>
-
-        <input
-            type="text"
-            name="nome"
-            placeholder="Nome completo"
-            value="<?= htmlspecialchars($_POST["nome"] ?? "") ?>"
-            required
-        >
+        
+            <input type="text" name="nome" placeholder="Nome completo" value="<?= htmlspecialchars($_POST["nome"] ?? "") ?>"required>
 
         <input
             type="email"

@@ -56,20 +56,13 @@ $pagina_atual = "agendamentoC";
 
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-
-<meta charset="UTF-8">
-
-<title>Agendar visita | ConectaNet</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <meta charset="UTF-8">
+    <title>Agendar visita | ConectaNet</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
-
 .agendamento {
     background: white;
     padding: 25px;
@@ -77,58 +70,32 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     box-shadow: 0 2px 8px #ddd;
     max-width: 600px;
 }
-
 .agendamento input {
     width: 100%;
     margin-bottom: 15px;
 }
-
 </style>
 
 </head>
-
 <body>
 
 <?php include "menu.php"; ?>
 
 <main>
-
-<h1>Agendar visita técnica</h1>
-
-<div class="agendamento">
-
-<form method="POST">
-
-<label>Data:</label>
-
-<input
-    type="date"
-    name="data"
-    required
->
-
-<label>Horário:</label>
-
-<input
-    type="time"
-    name="horario"
-    required
->
-
-<button type="submit">
-
-<i class="fa-solid fa-calendar-check"></i>
-
-Solicitar agendamento
-
-</button>
-
-</form>
-
-</div>
-
+    <h1>Agendar visita técnica</h1>
+    <div class="agendamento">
+        <form method="POST">
+            <label>Data:</label>
+            <input type="date" name="data" required>
+            <label>Horário:</label>
+            <input type="time" name="horario" required>
+            <button type="submit">
+                <i class="fa-solid fa-calendar-check"></i>
+                Solicitar agendamento
+            </button>
+        </form>
+    </div>
 </main>
 
 </body>
-
 </html>
