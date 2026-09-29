@@ -388,7 +388,7 @@ footer {
     }
 
 }
-.pagina-inicial{
+.pagina-inicial {
     --azul: #3157d5;
     --azul-escuro: #1f3fae;
     --azul-claro: #eef2ff;
@@ -398,20 +398,20 @@ footer {
     background: #ffffff;
     color: var(--texto);
 }
-.pagina-inicial a{
+.pagina-inicial a {
     text-decoration: none;
     color: inherit;
 }
-.pagina-inicial img{
+.pagina-inicial img {
     max-width: 100%;
     display: block;
 }
-.pagina-inicial .container{
+.pagina-inicial .container {
     max-width: 1180px;
     margin: 0 auto;
     padding: 0 25px;
 }
-.pagina-inicial .btn{
+.pagina-inicial .btn {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -422,14 +422,14 @@ footer {
     border: none;
     cursor: pointer;
 }
-.pagina-inicial .btn-azul{
+.pagina-inicial .btn-azul {
     background: var(--azul);
     color: white;
 }
-.pagina-inicial .btn-azul:hover{
+.pagina-inicial .btn-azul:hover {
     background: var(--azul-escuro);
 }
-.pagina-inicial .marca{
+.pagina-inicial .marca {
     font-size: 22px;
     font-weight: bold;
     color: var(--azul);
@@ -437,34 +437,34 @@ footer {
     align-items: center;
     gap: 8px;
 }
-.pagina-inicial .hero{
+.pagina-inicial .hero {
     position: relative;
     background: linear-gradient(180deg, var(--azul-claro) 0%, #ffffff 75%);
     padding: 70px 0 90px;
     overflow: hidden;
 }
 .pagina-inicial .hero::before,
-.pagina-inicial .hero::after{
+.pagina-inicial .hero::after {
     content: "";
     position: absolute;
     border-radius: 50%;
     background: radial-gradient(circle, rgba(49,87,213,.16) 0%, rgba(49,87,213,0) 70%);
     z-index: 0;
 }
-.pagina-inicial .hero::before{
+.pagina-inicial .hero::before {
     width: 620px;
     height: 620px;
     top: -260px;
     right: -160px;
 }
-.pagina-inicial .hero::after{
+.pagina-inicial .hero::after {
     width: 380px;
     height: 380px;
     bottom: -220px;
     left: -120px;
     background: radial-gradient(circle, rgba(49,87,213,.10) 0%, rgba(49,87,213,0) 70%);
 }
-.pagina-inicial .hero .container{
+.pagina-inicial .hero .container {
     position: relative;
     z-index: 1;
     display: grid;
@@ -472,19 +472,19 @@ footer {
     gap: 50px;
     align-items: center;
 }
-.pagina-inicial .hero-tag{
+.pagina-inicial .hero-tag {
     color: var(--azul);
     font-weight: bold;
     font-size: 14px;
     margin-bottom: 14px;
 }
-.pagina-inicial .hero h1{
+.pagina-inicial .hero h1 {
     font-size: 42px;
     line-height: 1.2;
     color: var(--texto);
     margin-bottom: 20px;
 }
-.pagina-inicial .hero h1 span{
+.pagina-inicial .hero h1 span {
     color: var(--azul);
 }
 .pagina-inicial .hero p{
@@ -494,37 +494,37 @@ footer {
     max-width: 480px;
     margin-bottom: 28px;
 }
-.pagina-inicial .hero-rodape{
+.pagina-inicial .hero-rodape {
     margin-top: 18px;
     font-size: 13px;
     color: var(--texto-suave);
 }
-.pagina-inicial .mockup-wrap{
+.pagina-inicial .mockup-wrap {
     position: relative;
     isolation: isolate;
 }
 .pagina-inicial .mockup-wrap::before,
-.pagina-inicial .mockup-wrap::after{
+.pagina-inicial .mockup-wrap::after {
     content: "";
     position: absolute;
     border-radius: 50%;
     z-index: -1;
 }
-.pagina-inicial .mockup-wrap::before{
+.pagina-inicial .mockup-wrap::before {
     width: 340px;
     height: 340px;
     top: -60px;
     right: -70px;
     background: radial-gradient(circle, rgba(49,87,213,.22) 0%, rgba(49,87,213,0) 72%);
 }
-.pagina-inicial .mockup-wrap::after{
+.pagina-inicial .mockup-wrap::after {
     width: 240px;
     height: 240px;
     bottom: -50px;
     left: -60px;
     background: radial-gradient(circle, rgba(49,87,213,.16) 0%, rgba(49,87,213,0) 72%);
 }
-.pagina-inicial .mockup-dots{
+.pagina-inicial .mockup-dots {
     position: absolute;
     right: -18px;
     bottom: 18px;
@@ -535,7 +535,7 @@ footer {
     opacity: .35;
     z-index: -1;
 }
-.pagina-inicial .mockup{
+.pagina-inicial .mockup {
     position: relative;
     background: white;
     border-radius: 14px;
@@ -543,7 +543,7 @@ footer {
     overflow: hidden;
     border: 1px solid var(--borda);
 }
-.pagina-inicial .mockup-topo{
+.pagina-inicial .mockup-topo {
     background: var(--azul);
     color: white;
     padding: 12px 18px;
@@ -553,15 +553,15 @@ footer {
     align-items: center;
     gap: 8px;
 }
-.pagina-inicial .mockup-corpo{
+.pagina-inicial .mockup-corpo {
     padding: 18px;
 }
-.pagina-inicial .mockup-corpo h4{
+.pagina-inicial .mockup-corpo h4 {
     font-size: 13px;
     color: var(--texto-suave);
     margin-bottom: 12px;
 }
-.pagina-inicial .chamado-linha{
+.pagina-inicial .chamado-linha {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -571,16 +571,25 @@ footer {
     margin-bottom: 10px;
     font-size: 13px;
 }
-.pagina-inicial .badge{
+.pagina-inicial .badge {
     font-size: 11px;
     font-weight: bold;
     padding: 4px 10px;
     border-radius: 20px;
 }
-.pagina-inicial .badge.andamento{ background:#fff2d9; color:#a86500; }
-.pagina-inicial .badge.resolvido{ background:#d9f4e3; color:#1c8a4f; }
-.pagina-inicial .badge.aberto{ background:#e4e9ff; color:#3157d5; }
-.pagina-inicial .balao{
+.pagina-inicial .badge.andamento { 
+    background:#fff2d9;
+    color:#a86500; 
+}
+.pagina-inicial .badge.resolvido { 
+    background:#d9f4e3; 
+    color:#1c8a4f; 
+}
+.pagina-inicial .badge.aberto { 
+    background:#e4e9ff; 
+    color:#3157d5;
+}
+.pagina-inicial .balao {
     position: absolute;
     background: white;
     border-radius: 10px;
@@ -592,54 +601,63 @@ footer {
     gap: 10px;
     align-items: flex-start;
 }
-.pagina-inicial .balao i{
+.pagina-inicial .balao i {
     color: var(--azul);
     font-size: 16px;
     margin-top: 2px;
 }
-.pagina-inicial .balao strong{
+.pagina-inicial .balao strong {
     display: block;
     font-size: 13px;
     margin-bottom: 2px;
 }
-.pagina-inicial .balao{ z-index: 2; }
-.pagina-inicial .balao.b1{ top: -18px; right: -20px; }
-.pagina-inicial .balao.b2{ bottom: -18px; right: -20px; top: auto; }
-.pagina-inicial .secao{
+.pagina-inicial .balao { 
+    z-index: 2; 
+}
+.pagina-inicial .balao.b1 { 
+    top: -18px; 
+    right: -20px; 
+}
+.pagina-inicial .balao.b2 { 
+    bottom: -18px; 
+    right: -20px; 
+    top: auto; 
+}
+.pagina-inicial .secao {
     padding: 80px 0;
 }
-.pagina-inicial .secao.cinza{
+.pagina-inicial .secao.cinza {
     background: var(--azul-claro);
 }
-.pagina-inicial .titulo-secao{
+.pagina-inicial .titulo-secao {
     text-align: center;
     margin-bottom: 45px;
 }
-.pagina-inicial .titulo-secao .eyebrow{
+.pagina-inicial .titulo-secao .eyebrow {
     color: var(--azul);
     font-weight: bold;
     font-size: 13px;
     margin-bottom: 8px;
 }
-.pagina-inicial .titulo-secao h2{
+.pagina-inicial .titulo-secao h2 {
     font-size: 30px;
 }
-.pagina-inicial .titulo-secao p{
+.pagina-inicial .titulo-secao p {
     color: var(--texto-suave);
     margin-top: 8px;
 }
-.pagina-inicial .contato-grid{
+.pagina-inicial .contato-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
     align-items: start;
 }
-.pagina-inicial .contato-item{
+.pagina-inicial .contato-item {
     display: flex;
     gap: 14px;
     margin-bottom: 22px;
 }
-.pagina-inicial .contato-item i{
+.pagina-inicial .contato-item i {
     width: 38px;
     height: 38px;
     flex-shrink: 0;
@@ -650,74 +668,74 @@ footer {
     align-items: center;
     justify-content: center;
 }
-.pagina-inicial .contato-item strong{
+.pagina-inicial .contato-item strong {
     display: block;
     margin-bottom: 4px;
 }
-.pagina-inicial .contato-item span{
+.pagina-inicial .contato-item span {
     color: var(--texto-suave);
     font-size: 14px;
 }
-.pagina-inicial .form-contato{
+.pagina-inicial .form-contato {
     background: white;
     border-radius: 14px;
     padding: 30px;
     box-shadow: 0 15px 40px rgba(49,87,213,.1);
 }
-.pagina-inicial .form-contato label{
+.pagina-inicial .form-contato label {
     display: block;
     font-size: 12px;
     font-weight: bold;
     color: var(--texto-suave);
     margin: 14px 0 6px;
 }
-.pagina-inicial .form-contato label:first-child{
+.pagina-inicial .form-contato label:first-child {
     margin-top: 0;
 }
 .pagina-inicial .form-contato input,
-.pagina-inicial .form-contato textarea{
+.pagina-inicial .form-contato textarea {
     width: 100%;
     padding: 11px 13px;
     border: 1px solid var(--borda);
     border-radius: 8px;
     font-size: 14px;
 }
-.pagina-inicial .form-contato textarea{
+.pagina-inicial .form-contato textarea {
     resize: vertical;
     min-height: 90px;
 }
-.pagina-inicial .form-contato .btn{
+.pagina-inicial .form-contato .btn {
     margin-top: 20px;
     width: 100%;
     justify-content: center;
 }
-.pagina-inicial .depoimentos-grid{
+.pagina-inicial .depoimentos-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
 }
-.pagina-inicial .depoimento{
+.pagina-inicial .depoimento {
     background: var(--azul-claro);
     border-radius: 14px;
     padding: 28px;
 }
-.pagina-inicial .depoimento i.aspas{
+.pagina-inicial .depoimento i.aspas {
     color: var(--azul);
     font-size: 22px;
     margin-bottom: 12px;
 }
-.pagina-inicial .depoimento p{
+.pagina-inicial .depoimento p {
     color: var(--texto);
     font-size: 14px;
     line-height: 1.6;
     margin-bottom: 20px;
 }
-.pagina-inicial .autor{
+.pagina-inicial .autor {
     display: flex;
     align-items: center;
     gap: 12px;
 }
-.pagina-inicial .autor .avatar{
+.pagina-inicial .autor .avatar {
     width: 38px;
     height: 38px;
     border-radius: 50%;
@@ -729,65 +747,85 @@ footer {
     font-weight: bold;
     font-size: 14px;
 }
-.pagina-inicial .autor strong{
+.pagina-inicial .autor strong {
     display: block;
     font-size: 13px;
 }
 
-.pagina-inicial .autor span{
+.pagina-inicial .autor span {
     font-size: 12px;
     color: var(--texto-suave);
 }
-.pagina-inicial footer.principal{
+.pagina-inicial footer.principal {
     background: #14204d;
     color: #c7cff2;
     padding: 55px 0 25px;
 }
-.pagina-inicial .rodape-grid{
+.pagina-inicial .rodape-grid {
     display: grid;
     grid-template-columns: 1.6fr 1fr 1fr 1fr;
     gap: 30px;
     padding-bottom: 35px;
     border-bottom: 1px solid rgba(255,255,255,.12);
 }
-.pagina-inicial .rodape-grid .marca{
+.pagina-inicial .rodape-grid .marca {
     color: white;
     margin-bottom: 10px;
 }
-.pagina-inicial .rodape-grid p{
+.pagina-inicial .rodape-grid p {
     font-size: 13px;
     line-height: 1.6;
     max-width: 260px;
 }
-.pagina-inicial .rodape-grid h4{
+.pagina-inicial .rodape-grid h4 {
     color: white;
     font-size: 14px;
     margin-bottom: 16px;
 }
 .pagina-inicial .rodape-grid a,
-.pagina-inicial .rodape-grid li{
+.pagina-inicial .rodape-grid li {
     display: block;
     font-size: 13px;
     margin-bottom: 10px;
     list-style: none;
 }
-.pagina-inicial .rodape-grid a:hover{
+.pagina-inicial .rodape-grid a:hover {
     color: white;
 }
-.pagina-inicial .rodape-baixo{
+.pagina-inicial .rodape-baixo {
     display: flex;
     justify-content: space-between;
     padding-top: 20px;
     font-size: 12px;
 }
-@media (max-width: 860px){
-    .pagina-inicial .hero .container{ grid-template-columns: 1fr; }
-    .pagina-inicial .hero{ padding-top: 40px; }
-    .pagina-inicial .mockup-wrap{ margin-top: 40px; }
-    .pagina-inicial .balao{ display: none; }
-    .pagina-inicial .contato-grid{ grid-template-columns: 1fr; }
-    .pagina-inicial .depoimentos-grid{ grid-template-columns: 1fr; }
-    .pagina-inicial .rodape-grid{ grid-template-columns: 1fr 1fr; }
+@media (max-width: 860px) {
+    .pagina-inicial .hero .container { 
+        grid-template-columns: 1fr; 
+    }
+
+    .pagina-inicial .hero { 
+        padding-top: 40px; 
+    }
+
+    .pagina-inicial .mockup-wrap { 
+        margin-top: 40px; 
+    }
+
+    .pagina-inicial .balao { 
+        display: none; 
+    }
+    
+    .pagina-inicial .contato-grid { 
+        grid-template-columns: 1fr; 
+    }
+
+    .pagina-inicial .depoimentos-grid { 
+        grid-template-columns: 1fr; 
+    }
+
+    .pagina-inicial .rodape-grid { 
+        grid-template-columns: 1fr 1fr; 
+    }
 }
 .pagina-inicial main {
     margin-left: 0;
