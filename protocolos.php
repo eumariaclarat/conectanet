@@ -156,9 +156,6 @@ style="display:none">
 
 <a href="editar.php?id=<?= $p["id_chamado"] ?>">Editar</a> |
 
-<a href="protocolos.php?excluir=<?= $p["id_chamado"] ?>"
-onclick="return confirm('Excluir protocolo?')">Excluir</a>
-
 </td>
 
 </tr>

@@ -42,12 +42,12 @@ if (isset($_SESSION["tipo"])) {
             <div class="hero-tag">SISTEMA DE GERENCIAMENTO DE CHAMADOS</div>
             <h1>Seu chamado, em <span>boas mãos.</span></h1>
             <p>
-                Com o ConectaNet, sua empresa ganha um sistema completo para
+                Com o <strong>ConectaNet</strong>, sua empresa ganha um sistema completo para
                 registrar, acompanhar e resolver chamados de forma simples,
                 rápida e organizada.
             </p>
             <a class="btn btn-azul" href="cadastro.php">
-                Criar chamado <i class="fa-solid fa-arrow-right"></i>
+                Criar chamado
             </a>
             <div class="hero-rodape">É rápido, fácil e seguro.</div>
         </div>
@@ -107,9 +107,8 @@ if (isset($_SESSION["tipo"])) {
                 <div class="contato-item">
                     <i class="fa-solid fa-location-dot"></i>
                     <div>
-                        <strong> Rodovia BR-470, Km 137, 2555 - Bairro Navegantes, Rio do Sul - SC, CEP 89162-528</strong>
-                        <span>Senai - SC<br>
-                        Rio do sul - SC</span>
+                        <strong>Endereço</strong>
+                        <span>SENAI, Rio do Sul - SC</span>
                     </div>
                 </div>
 
@@ -133,7 +132,7 @@ if (isset($_SESSION["tipo"])) {
                     <i class="fa-regular fa-clock"></i>
                     <div>
                         <strong>Horário de atendimento</strong>
-                        <span>Segunda a sexta: 8h-12h, 14h-18h30<br>Sábados: 8h-12h</span>
+                        <span>Segunda a sexta: 18h50 - 22h <br>Sábados: 8h - 12h</span>
                     </div>
                 </div>
             </div>
@@ -179,7 +178,7 @@ if (isset($_SESSION["tipo"])) {
                 <i class="fa-solid fa-quote-left aspas"></i>
                 <p>O ConectaNet facilitou muito o nosso dia a dia. Agora conseguimos acompanhar todos os chamados sem perder nada.</p>
                 <div class="autor">
-                    <div class="avatar">JS</div>
+                    <div class="avatar">DB</div>
                     <div>
                         <strong>Daniel Baumann</strong>
                         <span>RH - Empresa Alpha</span>
@@ -191,7 +190,7 @@ if (isset($_SESSION["tipo"])) {
                 <i class="fa-solid fa-quote-left aspas"></i>
                 <p>Sistema simples, intuitivo e muito eficiente. Recomendo para qualquer empresa que precise de organização.</p>
                 <div class="autor">
-                    <div class="avatar">CO</div>
+                    <div class="avatar">AL</div>
                     <div>
                         <strong>Adriano Lucas</strong>
                         <span>TI - Empresa Beta</span>
@@ -237,7 +236,7 @@ if (isset($_SESSION["tipo"])) {
             <div>
                 <h4>Contato</h4>
                 <span><i class="fa-solid fa-phone"></i> (00) 0000-0000</span><br>
-                <span><i class="fa-solid fa-envelope"></i> contato@conectanet.com.br</span><br>
+                <span><i class="fa-solid fa-envelope"></i>contato@conectanet.com.br</span><br>
                 <span><i class="fa-solid fa-location-dot"></i> Rio do Sul - SC</span>
             </div>
 
