@@ -16,7 +16,6 @@ if ($tipo === "cliente" && $_SERVER["REQUEST_METHOD"] == "POST") {
 
     $id_agendamento = $conexao->insert_id;
 
-    // Busca o último chamado do cliente
     $stmt = $conexao->prepare(
         "SELECT chamado.id_chamado
          FROM chamado
