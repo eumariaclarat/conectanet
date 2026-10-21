@@ -49,7 +49,7 @@ if (isset($_SESSION["tipo"])) {
             <a class="btn btn-azul" href="cadastro.php">
                 Criar chamado
             </a>
-            <div class="hero-rodape">É rápido, fácil e seguro.</div>
+            
         </div>
 
         <div class="mockup-wrap">
