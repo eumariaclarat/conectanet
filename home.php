@@ -49,7 +49,6 @@ if (isset($_SESSION["tipo"])) {
             <a class="btn btn-azul" href="cadastro.php">
                 Criar chamado
             </a>
-            
         </div>
 
         <div class="mockup-wrap">
